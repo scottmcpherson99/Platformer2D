@@ -1,0 +1,18 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Platformer2D-5127.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Unreal Projects\Platformer2D\Intermediate\Build\Win64\Platformer2DEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Unreal Projects\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\Platformer2D.cpp.obj"
+"D:\Unreal Projects\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\Platformer2DGameModeBase.cpp.obj"
+"D:\Unreal Projects\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\PlayerCharacter.cpp.obj"
+"D:\Unreal Projects\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\Platformer2D.init.gen.cpp.obj"
+"D:\Unreal Projects\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\Platformer2DGameModeBase.gen.cpp.obj"
+"D:\Unreal Projects\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\PlayerCharacter.gen.cpp.obj"
+"D:\Unreal Projects\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\Default.rc2.res"
+/OUT:"D:\Unreal Projects\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-5127.lib"
+/INCLUDE:IMPLEMENT_MODULE_Platformer2D

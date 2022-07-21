@@ -1,0 +1,2 @@
+D:\Unreal Projects\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\Definitions.Platformer2D.h
+D:\Unreal Projects\Platformer2D\Source\Platformer2D\Platformer2D.h

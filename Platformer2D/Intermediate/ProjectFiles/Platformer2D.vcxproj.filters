@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Platformer2D.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{073BDFD4-CD25-4316-A6D0-677DF2862ED6}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Platformer2D.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\Platformer2DEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{B5483935-F990-4FDF-8206-4FCC0982BEC0}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Platformer2D">
+      <UniqueIdentifier>{8932DC46-CFAF-4A29-9F40-51D91D1EB6CE}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Platformer2D\Platformer2D.Build.cs">
+      <Filter>Source\Platformer2D</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Platformer2D\Platformer2D.cpp">
+      <Filter>Source\Platformer2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Platformer2D\Platformer2D.h">
+      <Filter>Source\Platformer2D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Platformer2D\Platformer2DGameModeBase.cpp">
+      <Filter>Source\Platformer2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Platformer2D\Platformer2DGameModeBase.h">
+      <Filter>Source\Platformer2D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Platformer2D\PlayerCharacter.cpp">
+      <Filter>Source\Platformer2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Platformer2D\PlayerCharacter.h">
+      <Filter>Source\Platformer2D</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
