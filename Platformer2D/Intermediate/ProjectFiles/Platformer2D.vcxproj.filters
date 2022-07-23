@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Platformer2D.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{073BDFD4-CD25-4316-A6D0-677DF2862ED6}</UniqueIdentifier>
+      <UniqueIdentifier>{F1669CE3-0B7A-4E67-BE1D-887550D228C5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Platformer2D.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{B5483935-F990-4FDF-8206-4FCC0982BEC0}</UniqueIdentifier>
+      <UniqueIdentifier>{B6318FD2-2FCC-46A5-9CE4-841C8CD2CEC9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -23,9 +23,24 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\Platformer2D">
-      <UniqueIdentifier>{8932DC46-CFAF-4A29-9F40-51D91D1EB6CE}</UniqueIdentifier>
+      <UniqueIdentifier>{CCA3A112-F225-41BD-A270-F380DE203F37}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Platformer2D\MainMenuGameModeBase.cpp">
+      <Filter>Source\Platformer2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Platformer2D\MainMenuGameModeBase.h">
+      <Filter>Source\Platformer2D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Platformer2D\MainMenuWidget.cpp">
+      <Filter>Source\Platformer2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Platformer2D\MainMenuWidget.h">
+      <Filter>Source\Platformer2D</Filter>
+    </ClInclude>
     <None Include="..\..\Source\Platformer2D\Platformer2D.Build.cs">
       <Filter>Source\Platformer2D</Filter>
     </None>

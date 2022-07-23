@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "Platformer2D",
-			"Path": "D:\\Unreal Projects\\Platformer2D\\Source\\Platformer2D.Target.cs",
+			"Path": "D:\\Unreal Projects\\PlatformerJuly22\\Platformer2D\\Platformer2D\\Source\\Platformer2D.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "Platformer2DEditor",
-			"Path": "D:\\Unreal Projects\\Platformer2D\\Source\\Platformer2DEditor.Target.cs",
+			"Path": "D:\\Unreal Projects\\PlatformerJuly22\\Platformer2D\\Platformer2D\\Source\\Platformer2DEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]
