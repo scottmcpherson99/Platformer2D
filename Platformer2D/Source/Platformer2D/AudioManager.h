@@ -1,0 +1,51 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "AudioManager.generated.h"
+
+UCLASS()
+class PLATFORMER2D_API AAudioManager : public AActor
+{
+	GENERATED_BODY()
+	
+public:	
+	// Sets default values for this actor's properties
+	AAudioManager();
+
+
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// <PlayAudio>
+	//play sound on repeat
+	UFUNCTION()
+	void PlayLoopingAudio(USoundBase* desiredSound);
+	
+	//Play sound
+	void PlayAudio(USoundBase* desiredSound);
+
+	//Play sound at location
+	void PlayAudioAtLocation(USoundBase* desiredSound, FVector desiredLocation);
+	// </PlayAudio>
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+protected:
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// <AAudioManager>
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+	// </AAudioManager>
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// <HandleLoops>
+	//timer to declare how long each loop should last
+	FTimerHandle loopTimer;
+
+	void doLoop(USoundBase* desiredSound);
+	// </HandleLoops>
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+};

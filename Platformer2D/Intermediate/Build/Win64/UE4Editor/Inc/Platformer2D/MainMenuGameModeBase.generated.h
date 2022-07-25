@@ -59,7 +59,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMainMenuGameModeBase); \
 
 
 #define Platformer2D_Source_Platformer2D_MainMenuGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__MainMenuHUDWidget() { return STRUCT_OFFSET(AMainMenuGameModeBase, MainMenuHUDWidget); }
+	FORCEINLINE static uint32 __PPO__MainMenuHUDWidget() { return STRUCT_OFFSET(AMainMenuGameModeBase, MainMenuHUDWidget); } \
+	FORCEINLINE static uint32 __PPO__audioManager() { return STRUCT_OFFSET(AMainMenuGameModeBase, audioManager); } \
+	FORCEINLINE static uint32 __PPO__backgroundMusic() { return STRUCT_OFFSET(AMainMenuGameModeBase, backgroundMusic); }
 
 
 #define Platformer2D_Source_Platformer2D_MainMenuGameModeBase_h_12_PROLOG

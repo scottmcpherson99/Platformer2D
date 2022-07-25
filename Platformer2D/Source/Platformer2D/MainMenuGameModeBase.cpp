@@ -6,6 +6,8 @@
 
 #include "PlayerCharacter.h"
 
+#include "AudioManager.h"
+
 #include "Kismet/GameplayStatics.h"
 
 #include "Blueprint/UserWidget.h"
@@ -43,6 +45,17 @@ void AMainMenuGameModeBase::BeginPlay()
 		mainMenuWidget = Cast<UMainMenuWidget>(CreateWidget(GetWorld(), MainMenuHUDWidget));
 		mainMenuWidget->AddToViewport();
 		mainMenuWidget->OnStart();
+	}
+
+	//create the audio manager handler that will play the audio in the main menu and play the background music
+	if (IsValid(audioManager))
+	{
+		audioManagerHandler = Cast<AAudioManager>(UGameplayStatics::GetActorOfClass(GetWorld(), audioManager));
+
+		if (audioManagerHandler != nullptr)
+		{
+			audioManagerHandler->PlayLoopingAudio(backgroundMusic);
+		}
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
