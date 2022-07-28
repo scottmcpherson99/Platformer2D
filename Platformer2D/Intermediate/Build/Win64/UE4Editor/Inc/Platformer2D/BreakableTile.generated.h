@@ -70,7 +70,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABreakableTile); \
 
 
 #define Platformer2D_Source_Platformer2D_BreakableTile_h_15_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__TriggerBox() { return STRUCT_OFFSET(ABreakableTile, TriggerBox); }
+	FORCEINLINE static uint32 __PPO__TriggerBox() { return STRUCT_OFFSET(ABreakableTile, TriggerBox); } \
+	FORCEINLINE static uint32 __PPO__tileStrength() { return STRUCT_OFFSET(ABreakableTile, tileStrength); }
 
 
 #define Platformer2D_Source_Platformer2D_BreakableTile_h_12_PROLOG

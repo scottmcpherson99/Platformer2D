@@ -43,6 +43,10 @@ protected:
 
 	//timer to delay the destruction of the tile
 	FTimerHandle destroyTimer;
+
+	//choose how strong the tile is, how many times the player needs to hit the tile for it to break
+	UPROPERTY(EditAnywhere, meta = (UIMin = 1, UIMax = 10), Category = strength)
+		int tileStrength;
 	// </TileDestruction>
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 };

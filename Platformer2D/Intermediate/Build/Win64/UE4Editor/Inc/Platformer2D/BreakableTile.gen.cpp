@@ -141,6 +141,10 @@ void EmptyLinkFunctionForGeneratedCodeBreakableTile() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TriggerBox_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_TriggerBox;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_tileStrength_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_tileStrength;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -169,8 +173,20 @@ void EmptyLinkFunctionForGeneratedCodeBreakableTile() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABreakableTile_Statics::NewProp_TriggerBox = { "TriggerBox", nullptr, (EPropertyFlags)0x00200800000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABreakableTile, TriggerBox), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABreakableTile_Statics::NewProp_TriggerBox_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABreakableTile_Statics::NewProp_TriggerBox_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABreakableTile_Statics::NewProp_tileStrength_MetaData[] = {
+		{ "Category", "strength" },
+		{ "Comment", "//choose how strong the tile is, how many times the player needs to hit the tile for it to break\n" },
+		{ "ModuleRelativePath", "BreakableTile.h" },
+		{ "ToolTip", "choose how strong the tile is, how many times the player needs to hit the tile for it to break" },
+		{ "UIMax", "10" },
+		{ "UIMin", "1" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ABreakableTile_Statics::NewProp_tileStrength = { "tileStrength", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABreakableTile, tileStrength), METADATA_PARAMS(Z_Construct_UClass_ABreakableTile_Statics::NewProp_tileStrength_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABreakableTile_Statics::NewProp_tileStrength_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABreakableTile_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABreakableTile_Statics::NewProp_TriggerBox,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABreakableTile_Statics::NewProp_tileStrength,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ABreakableTile_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABreakableTile>::IsAbstract,
@@ -199,7 +215,7 @@ void EmptyLinkFunctionForGeneratedCodeBreakableTile() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABreakableTile, 3304274254);
+	IMPLEMENT_CLASS(ABreakableTile, 2812095145);
 	template<> PLATFORMER2D_API UClass* StaticClass<ABreakableTile>()
 	{
 		return ABreakableTile::StaticClass();

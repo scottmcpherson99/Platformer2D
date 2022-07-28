@@ -38,8 +38,13 @@ void ABreakableTile::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponen
 
 	if (playerCharacter != nullptr)
 	{
-		//destroy the tile
-		GetWorldTimerManager().SetTimer(destroyTimer, this, &ABreakableTile::DestroyTile, 0.1f, false);
+		tileStrength--;
+
+		if (tileStrength < 1)
+		{
+			//destroy the tile
+			GetWorldTimerManager().SetTimer(destroyTimer, this, &ABreakableTile::DestroyTile, 0.1f, false);
+		}
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
