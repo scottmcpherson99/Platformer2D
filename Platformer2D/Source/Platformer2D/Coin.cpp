@@ -39,6 +39,7 @@ void ACoin::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 
 	if (playerCharacter != nullptr)
 	{
+		playerCharacter->SetCoins(1);
 		//destroy the coin
 		Destroy();
 	}

@@ -3,6 +3,8 @@
 
 #include "PlayerCharacter.h"
 
+#include "InPlayGameModeBase.h"
+
 #include "Components/InputComponent.h"
 
 #include "GameFramework/CharacterMovementComponent.h"
@@ -69,6 +71,40 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &APlayerCharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &APlayerCharacter::StopJumping);
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// <GettersandSetters>
+//update the value of the player's coins
+void APlayerCharacter::SetCoins(float value_)
+{
+	coins += value_;
+
+	//update the players stats on the widget
+	UpdatePlayerStats();
+}
+
+// Output the player's coins
+float APlayerCharacter::GetCoins()
+{
+	return coins;
+}
+
+//update the value of the player's lives
+void APlayerCharacter::SetLives(float value_)
+{
+	lives += value_;
+
+	//update the players stats on the widget
+	UpdatePlayerStats();
+}
+
+// Output the player's lives
+float APlayerCharacter::GetLives()
+{
+	return lives;
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -162,5 +198,20 @@ void APlayerCharacter::SetIdleAnimation()
 
 	//clear the animation timer
 	GetWorldTimerManager().ClearTimer(animationTimer);
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Widgets
+//update the player stats on the display widget
+void APlayerCharacter::UpdatePlayerStats()
+{
+	//find the current gamemode and update the players stats on the displayed widget
+	AInPlayGameModeBase* gameMode = (AInPlayGameModeBase*)GetWorld()->GetAuthGameMode();
+	if (gameMode)
+	{
+		gameMode->UpdatePlayerStats(coins, lives);
+	}
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
