@@ -5,6 +5,8 @@
 
 #include "PlayerCharacter.h"
 
+#include "AudioManager.h"
+
 #include "Components/BoxComponent.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -40,6 +42,7 @@ void ACoin::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 	if (playerCharacter != nullptr)
 	{
 		playerCharacter->SetCoins(1);
+		audioManagerHandler->PlayAudio(collectionSound);
 		//destroy the coin
 		Destroy();
 	}

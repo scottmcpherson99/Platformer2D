@@ -69,7 +69,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACoin); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ACoin)
 
 
-#define Platformer2D_Source_Platformer2D_Coin_h_15_PRIVATE_PROPERTY_OFFSET
+#define Platformer2D_Source_Platformer2D_Coin_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__collectionSound() { return STRUCT_OFFSET(ACoin, collectionSound); }
+
+
 #define Platformer2D_Source_Platformer2D_Coin_h_12_PROLOG
 #define Platformer2D_Source_Platformer2D_Coin_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

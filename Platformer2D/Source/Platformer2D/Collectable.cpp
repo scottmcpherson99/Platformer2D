@@ -3,6 +3,10 @@
 
 #include "Collectable.h"
 
+#include "AudioManager.h"
+
+#include "Kismet/GameplayStatics.h"
+
 #include "PaperFlipbookComponent.h"
 
 #include "Components/BoxComponent.h"
@@ -30,6 +34,12 @@ ACollectable::ACollectable()
 void ACollectable::BeginPlay()
 {
 	Super::BeginPlay();
+
+	//create the audio manager handler that will play the audio in the main menu and play the background music
+	if (IsValid(audioManager))
+	{
+		audioManagerHandler = Cast<AAudioManager>(UGameplayStatics::GetActorOfClass(GetWorld(), audioManager));
+	}
 }
 
 void ACollectable::Tick(float DeltaTime)

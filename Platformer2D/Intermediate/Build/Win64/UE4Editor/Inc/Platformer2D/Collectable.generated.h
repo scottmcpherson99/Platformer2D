@@ -60,7 +60,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACollectable); \
 
 #define Platformer2D_Source_Platformer2D_Collectable_h_15_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__spriteComponent() { return STRUCT_OFFSET(ACollectable, spriteComponent); } \
-	FORCEINLINE static uint32 __PPO__TriggerBox() { return STRUCT_OFFSET(ACollectable, TriggerBox); }
+	FORCEINLINE static uint32 __PPO__TriggerBox() { return STRUCT_OFFSET(ACollectable, TriggerBox); } \
+	FORCEINLINE static uint32 __PPO__audioManager() { return STRUCT_OFFSET(ACollectable, audioManager); }
 
 
 #define Platformer2D_Source_Platformer2D_Collectable_h_12_PROLOG
