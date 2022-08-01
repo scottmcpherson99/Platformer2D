@@ -162,9 +162,9 @@ void EmptyLinkFunctionForGeneratedCodeCoin() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACoin_Statics::NewProp_collectionSound_MetaData[] = {
 		{ "Category", "Audio" },
-		{ "Comment", "///////////////////////////////////////////////////////////////////////////////////////////////////////////\n// <Audio>\n//background music\n" },
+		{ "Comment", "///////////////////////////////////////////////////////////////////////////////////////////////////////////\n// <Audio>\n//sound for player jumping\n" },
 		{ "ModuleRelativePath", "Coin.h" },
-		{ "ToolTip", "<Audio>\nbackground music" },
+		{ "ToolTip", "<Audio>\nsound for player jumping" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACoin_Statics::NewProp_collectionSound = { "collectionSound", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACoin, collectionSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACoin_Statics::NewProp_collectionSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACoin_Statics::NewProp_collectionSound_MetaData)) };
@@ -198,7 +198,7 @@ void EmptyLinkFunctionForGeneratedCodeCoin() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACoin, 3595972410);
+	IMPLEMENT_CLASS(ACoin, 2020379524);
 	template<> PLATFORMER2D_API UClass* StaticClass<ACoin>()
 	{
 		return ACoin::StaticClass();

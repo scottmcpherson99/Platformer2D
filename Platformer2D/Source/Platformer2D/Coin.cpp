@@ -9,6 +9,7 @@
 
 #include "Components/BoxComponent.h"
 
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Sets default values
 ACoin::ACoin()
@@ -19,7 +20,7 @@ ACoin::ACoin()
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// <ACoin>
+// <ACoin>
 void ACoin::BeginPlay()
 {
 	//called on begin play
@@ -43,6 +44,7 @@ void ACoin::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 	{
 		playerCharacter->SetCoins(1);
 		audioManagerHandler->PlayAudio(collectionSound);
+
 		//destroy the coin
 		Destroy();
 	}

@@ -5,6 +5,8 @@
 
 #include "InPlayGameModeBase.h"
 
+#include "AudioManager.h"
+
 #include "Components/InputComponent.h"
 
 #include "GameFramework/CharacterMovementComponent.h"
@@ -14,6 +16,8 @@
 
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
+
+#include "Kismet/GameplayStatics.h"
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -54,6 +58,12 @@ void APlayerCharacter::BeginPlay()
 
 	//set the default animation value
 	SetIdleAnimation();
+
+	//create the audio manager handler that will play the audio in the main menu and play the background music
+	if (IsValid(audioManager))
+	{
+		audioManagerHandler = Cast<AAudioManager>(UGameplayStatics::GetActorOfClass(GetWorld(), audioManager));
+	}
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -118,6 +128,9 @@ void APlayerCharacter::Jump()
 	//play the jumping animation
 	UpdateAnimation(JumpingAnimation);
 	isAnimPlaying = true;
+
+	//play the jumping sound
+	audioManagerHandler->PlayAudio(jumpingSound);
 }
 
 void APlayerCharacter::StopJumping()
@@ -179,6 +192,45 @@ void APlayerCharacter::Attack()
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Handle Animations
+//choose which animation to play
+void APlayerCharacter::UpdateAnimation(EPlayerAnimation desiredAnimation_)
+{
+	switch (desiredAnimation_)
+	{
+		//play the idle animation
+	case EPlayerAnimation::EIDLE:
+		UpdateAnimation(IdleAnimation);
+		break;
+
+		//play the walking animation
+	case EPlayerAnimation::EWALKING:
+		UpdateAnimation(WalkingAnimation);
+		break;
+
+		//play the running animation
+	case EPlayerAnimation::ERUNNING:
+		UpdateAnimation(RunningAnimation);
+		break;
+
+		//play the jumping animation
+	case EPlayerAnimation::EJUMPING:
+		UpdateAnimation(JumpingAnimation);
+		break;
+
+		//play the cheering animation
+	case EPlayerAnimation::ECHEERING:
+		UpdateAnimation(CheerAnimation);
+		break;
+
+		//play the attacking animation
+	case EPlayerAnimation::EATTACKING:
+		UpdateAnimation(AttackAnimation);
+		break;
+	}
+	
+}
+
+//set the animation for the character
 void APlayerCharacter::UpdateAnimation(UPaperFlipbook* desiredAnimation_)
 {
 	//check if the new desired animation is not the current animation being played, if it is not, play the new desired animation

@@ -1,0 +1,49 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "Collectable.h"
+#include "Goal.generated.h"
+
+/**
+ * 
+ */
+UCLASS()
+class PLATFORMER2D_API AGoal : public ACollectable
+{
+	GENERATED_BODY()
+	
+public:
+	AGoal();
+
+
+	//the flagpole sprite
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Sprite)
+		class UPaperSpriteComponent* flagpoleMesh;
+protected:
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// <AGoal>
+	// Called when the game starts or when spawned
+	virtual void BeginPlay();
+	// </AGoal>
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// <Collision>
+	UFUNCTION()
+		void OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	// </Collision>
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// <Audio>
+	//sound for player jumping
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Audio")
+		class USoundBase* collectionSound;
+	// </Audio>
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+};
