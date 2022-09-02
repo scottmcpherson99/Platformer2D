@@ -70,7 +70,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AGoal); \
 
 
 #define Platformer2D_Source_Platformer2D_Goal_h_15_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__collectionSound() { return STRUCT_OFFSET(AGoal, collectionSound); }
+	FORCEINLINE static uint32 __PPO__cheeringSound() { return STRUCT_OFFSET(AGoal, cheeringSound); }
 
 
 #define Platformer2D_Source_Platformer2D_Goal_h_12_PROLOG

@@ -104,3 +104,13 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\UMG\Public\Components/
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\TextWidgetTypes.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\TextBlock.generated.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\GameHUD.generated.h
+D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D\DeathScreen.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\UMG\Public\Components/Button.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\UMG\Public\Components/ContentWidget.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\UMG\Public\Components/PanelWidget.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\UMG\Public\Components/PanelSlot.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\PanelSlot.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\PanelWidget.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\ContentWidget.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\Button.generated.h
+D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\DeathScreen.generated.h

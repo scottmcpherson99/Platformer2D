@@ -3,6 +3,8 @@
 
 #include "Goal.h"
 
+#include "InPlayGameModeBase.h"
+
 #include "PlayerCharacter.h"
 
 #include "AudioManager.h"
@@ -47,8 +49,9 @@ void AGoal::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 
 	if (playerCharacter != nullptr)
 	{
-		//play the cheering animation for the player
+		//play the cheering animation for the player and play the player cheering
 		playerCharacter->UpdateAnimation(EPlayerAnimation::ECHEERING);
+		audioManagerHandler->PlayAudio(cheeringSound);
 
 		//turn off the input for the player character and show the mouse cursor to let the user navigate the widget
 		APlayerController* playerController = UGameplayStatics::GetPlayerController(this, 0);
@@ -60,6 +63,13 @@ void AGoal::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 			{
 				playerCharacter->DisableInput(playerController);
 			}
+		}
+
+		//find the current gamemode and play the fade out animation
+		AInPlayGameModeBase* gameMode = (AInPlayGameModeBase*)GetWorld()->GetAuthGameMode();
+		if (gameMode)
+		{
+			gameMode->PlayFadeOut();
 		}
 	}
 }

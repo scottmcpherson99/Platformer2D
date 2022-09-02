@@ -22,7 +22,7 @@ void UMainMenuWidget::OnQuitClicked()
 {
 	//exit the application
 	UKismetSystemLibrary::QuitGame(GetWorld(), UGameplayStatics::GetPlayerController(GetWorld(), 0), EQuitPreference::Quit, true);
-	}
+}
 
 void UMainMenuWidget::OnOptionsClicked()
 {

@@ -5,6 +5,12 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\2D\Paper2D\Source\Paper2D\Cla
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D\PaperSpriteActor.generated.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\Collectable.generated.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\Goal.generated.h
+D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D\InPlayGameModeBase.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\InPlayGameModeBase.generated.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D\PlayerCharacter.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\2D\Paper2D\Source\Paper2D\Classes\PaperCharacter.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h

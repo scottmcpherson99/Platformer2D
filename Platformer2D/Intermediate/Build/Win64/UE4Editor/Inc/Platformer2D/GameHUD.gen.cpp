@@ -17,7 +17,9 @@ void EmptyLinkFunctionForGeneratedCodeGameHUD() {}
 	PLATFORMER2D_API UClass* Z_Construct_UClass_UGameHUD();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget();
 	UPackage* Z_Construct_UPackage__Script_Platformer2D();
+	UMG_API UClass* Z_Construct_UClass_UWidgetAnimation_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
+	PLATFORMER2D_API UClass* Z_Construct_UClass_UDeathScreen_NoRegister();
 // End Cross Module References
 	void UGameHUD::StaticRegisterNativesUGameHUD()
 	{
@@ -33,6 +35,18 @@ void EmptyLinkFunctionForGeneratedCodeGameHUD() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FadeInAnimation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FadeInAnimation;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FadeOutAnimation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FadeOutAnimation;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DeathAnimation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_DeathAnimation;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayerCoins_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PlayerCoins;
@@ -40,6 +54,10 @@ void EmptyLinkFunctionForGeneratedCodeGameHUD() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayerLives_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PlayerLives;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_deathScreenHUD_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_deathScreenHUD;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -55,6 +73,33 @@ void EmptyLinkFunctionForGeneratedCodeGameHUD() {}
 		{ "ModuleRelativePath", "GameHUD.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameHUD_Statics::NewProp_FadeInAnimation_MetaData[] = {
+		{ "BindWidgetAnim", "" },
+		{ "Comment", "//fade in animation\n" },
+		{ "ModuleRelativePath", "GameHUD.h" },
+		{ "ToolTip", "fade in animation" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameHUD_Statics::NewProp_FadeInAnimation = { "FadeInAnimation", nullptr, (EPropertyFlags)0x0010000000002000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameHUD, FadeInAnimation), Z_Construct_UClass_UWidgetAnimation_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameHUD_Statics::NewProp_FadeInAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameHUD_Statics::NewProp_FadeInAnimation_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameHUD_Statics::NewProp_FadeOutAnimation_MetaData[] = {
+		{ "BindWidgetAnim", "" },
+		{ "Comment", "//fade out animation\n" },
+		{ "ModuleRelativePath", "GameHUD.h" },
+		{ "ToolTip", "fade out animation" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameHUD_Statics::NewProp_FadeOutAnimation = { "FadeOutAnimation", nullptr, (EPropertyFlags)0x0010000000002000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameHUD, FadeOutAnimation), Z_Construct_UClass_UWidgetAnimation_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameHUD_Statics::NewProp_FadeOutAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameHUD_Statics::NewProp_FadeOutAnimation_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameHUD_Statics::NewProp_DeathAnimation_MetaData[] = {
+		{ "BindWidgetAnim", "" },
+		{ "Comment", "//death animation\n" },
+		{ "ModuleRelativePath", "GameHUD.h" },
+		{ "ToolTip", "death animation" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameHUD_Statics::NewProp_DeathAnimation = { "DeathAnimation", nullptr, (EPropertyFlags)0x0010000000002000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameHUD, DeathAnimation), Z_Construct_UClass_UWidgetAnimation_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameHUD_Statics::NewProp_DeathAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameHUD_Statics::NewProp_DeathAnimation_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerCoins_MetaData[] = {
 		{ "BindWidget", "" },
@@ -77,9 +122,24 @@ void EmptyLinkFunctionForGeneratedCodeGameHUD() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerLives = { "PlayerLives", nullptr, (EPropertyFlags)0x002008000008001c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameHUD, PlayerLives), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerLives_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerLives_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameHUD_Statics::NewProp_deathScreenHUD_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "GameHUD" },
+		{ "Comment", "//animation to be played upon players death\n" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "GameHUD.h" },
+		{ "ToolTip", "animation to be played upon players death" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameHUD_Statics::NewProp_deathScreenHUD = { "deathScreenHUD", nullptr, (EPropertyFlags)0x002008000008001c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameHUD, deathScreenHUD), Z_Construct_UClass_UDeathScreen_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameHUD_Statics::NewProp_deathScreenHUD_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameHUD_Statics::NewProp_deathScreenHUD_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UGameHUD_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameHUD_Statics::NewProp_FadeInAnimation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameHUD_Statics::NewProp_FadeOutAnimation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameHUD_Statics::NewProp_DeathAnimation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerCoins,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerLives,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameHUD_Statics::NewProp_deathScreenHUD,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGameHUD_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UGameHUD>::IsAbstract,
@@ -108,7 +168,7 @@ void EmptyLinkFunctionForGeneratedCodeGameHUD() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGameHUD, 963039733);
+	IMPLEMENT_CLASS(UGameHUD, 2117608178);
 	template<> PLATFORMER2D_API UClass* StaticClass<UGameHUD>()
 	{
 		return UGameHUD::StaticClass();

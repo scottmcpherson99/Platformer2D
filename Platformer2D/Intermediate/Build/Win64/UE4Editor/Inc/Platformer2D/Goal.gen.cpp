@@ -143,9 +143,9 @@ void EmptyLinkFunctionForGeneratedCodeGoal() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_flagpoleMesh;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_collectionSound_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_cheeringSound_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_collectionSound;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_cheeringSound;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -167,25 +167,25 @@ void EmptyLinkFunctionForGeneratedCodeGoal() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGoal_Statics::NewProp_flagpoleMesh_MetaData[] = {
 		{ "Category", "Sprite" },
-		{ "Comment", "//the flagpole sprite\n" },
+		{ "Comment", "///////////////////////////////////////////////////////////////////////////////////////////////////////////\n// <Components>\n//the flagpole sprite\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Goal.h" },
-		{ "ToolTip", "the flagpole sprite" },
+		{ "ToolTip", "<Components>\nthe flagpole sprite" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGoal_Statics::NewProp_flagpoleMesh = { "flagpoleMesh", nullptr, (EPropertyFlags)0x001000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGoal, flagpoleMesh), Z_Construct_UClass_UPaperSpriteComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGoal_Statics::NewProp_flagpoleMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGoal_Statics::NewProp_flagpoleMesh_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGoal_Statics::NewProp_collectionSound_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGoal_Statics::NewProp_cheeringSound_MetaData[] = {
 		{ "Category", "Audio" },
-		{ "Comment", "///////////////////////////////////////////////////////////////////////////////////////////////////////////\n// <Audio>\n//sound for player jumping\n" },
+		{ "Comment", "///////////////////////////////////////////////////////////////////////////////////////////////////////////\n// <Audio>\n//sound for player cheering\n" },
 		{ "ModuleRelativePath", "Goal.h" },
-		{ "ToolTip", "<Audio>\nsound for player jumping" },
+		{ "ToolTip", "<Audio>\nsound for player cheering" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGoal_Statics::NewProp_collectionSound = { "collectionSound", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGoal, collectionSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGoal_Statics::NewProp_collectionSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGoal_Statics::NewProp_collectionSound_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGoal_Statics::NewProp_cheeringSound = { "cheeringSound", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGoal, cheeringSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGoal_Statics::NewProp_cheeringSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGoal_Statics::NewProp_cheeringSound_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGoal_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGoal_Statics::NewProp_flagpoleMesh,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGoal_Statics::NewProp_collectionSound,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGoal_Statics::NewProp_cheeringSound,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AGoal_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AGoal>::IsAbstract,
@@ -214,7 +214,7 @@ void EmptyLinkFunctionForGeneratedCodeGoal() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGoal, 1391780638);
+	IMPLEMENT_CLASS(AGoal, 3545956779);
 	template<> PLATFORMER2D_API UClass* StaticClass<AGoal>()
 	{
 		return AGoal::StaticClass();
