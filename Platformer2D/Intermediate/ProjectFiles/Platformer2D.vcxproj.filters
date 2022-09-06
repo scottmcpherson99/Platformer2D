@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Platformer2D.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{727B348F-3F01-4C57-8B74-FC047F843B7F}</UniqueIdentifier>
+      <UniqueIdentifier>{DC80D64F-B452-4609-BC69-7AAF2A343DE5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Platformer2D.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{959C5E1D-09FF-456A-A98D-4605DEE4D5EB}</UniqueIdentifier>
+      <UniqueIdentifier>{0D414F90-265D-49E0-A07F-22674916A2AA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Platformer2D">
-      <UniqueIdentifier>{4C3D6BDD-13DA-4EAC-9675-0C77972F4464}</UniqueIdentifier>
+      <UniqueIdentifier>{6CA45567-57DA-4E5C-B8D6-3307F2D1EFE0}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Platformer2D\AudioManager.cpp">
       <Filter>Source\Platformer2D</Filter>
@@ -69,6 +69,12 @@
       <Filter>Source\Platformer2D</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Platformer2D\Collectable.h">
+      <Filter>Source\Platformer2D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Platformer2D\DeathBox.cpp">
+      <Filter>Source\Platformer2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Platformer2D\DeathBox.h">
       <Filter>Source\Platformer2D</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Platformer2D\DeathScreen.cpp">

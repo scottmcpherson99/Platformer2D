@@ -34,13 +34,13 @@ public:
 		void SetCoins(float value_);
 
 	// Output the players coins
-		float GetCoins();
+		const float GetCoins() const;
 
 	// Update the value of the players lives
 		void SetLives(float value_);
 
 	// Output the players lives
-		float GetLives();
+		const float GetLives() const;
 	// </GettersandSetters>
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 

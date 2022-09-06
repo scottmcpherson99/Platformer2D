@@ -114,7 +114,7 @@ void APlayerCharacter::SetCoins(float value_)
 }
 
 // Output the player's coins
-float APlayerCharacter::GetCoins()
+const float APlayerCharacter::GetCoins() const
 {
 	return coins;
 }
@@ -129,7 +129,7 @@ void APlayerCharacter::SetLives(float value_)
 }
 
 // Output the player's lives
-float APlayerCharacter::GetLives()
+const float APlayerCharacter::GetLives() const
 {
 	return lives;
 }

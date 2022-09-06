@@ -10,4 +10,11 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D\PaperCharacter.generated.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\EnemyBase.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/TimelineComponent.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\TimelineComponent.generated.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\BezierEnemy.generated.h
+D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D\BezierCurve.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/BoxComponent.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h
