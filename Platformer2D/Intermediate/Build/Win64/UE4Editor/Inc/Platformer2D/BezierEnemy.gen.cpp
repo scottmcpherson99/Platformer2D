@@ -171,7 +171,7 @@ void EmptyLinkFunctionForGeneratedCodeBezierEnemy() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABezierEnemy, 3650619988);
+	IMPLEMENT_CLASS(ABezierEnemy, 4099439162);
 	template<> PLATFORMER2D_API UClass* StaticClass<ABezierEnemy>()
 	{
 		return ABezierEnemy::StaticClass();

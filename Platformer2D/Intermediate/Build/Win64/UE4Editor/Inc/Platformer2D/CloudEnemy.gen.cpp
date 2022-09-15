@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeCloudEnemy() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACloudEnemy, 1950877949);
+	IMPLEMENT_CLASS(ACloudEnemy, 508680407);
 	template<> PLATFORMER2D_API UClass* StaticClass<ACloudEnemy>()
 	{
 		return ACloudEnemy::StaticClass();

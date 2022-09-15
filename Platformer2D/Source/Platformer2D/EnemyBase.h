@@ -33,7 +33,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Sprite)
 		class UPaperSpriteComponent* enemyMesh;
 
-	//trigger box to check for collisions with the bullet actor
+	//trigger box to check for collisions with the player
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Collision")
 		class UBoxComponent* TriggerBox;
 	// </Components>

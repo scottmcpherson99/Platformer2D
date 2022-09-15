@@ -178,10 +178,10 @@ void EmptyLinkFunctionForGeneratedCodeEnemyBase() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemyBase_Statics::NewProp_TriggerBox_MetaData[] = {
 		{ "Category", "Collision" },
-		{ "Comment", "//trigger box to check for collisions with the bullet actor\n" },
+		{ "Comment", "//trigger box to check for collisions with the player\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "EnemyBase.h" },
-		{ "ToolTip", "trigger box to check for collisions with the bullet actor" },
+		{ "ToolTip", "trigger box to check for collisions with the player" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyBase_Statics::NewProp_TriggerBox = { "TriggerBox", nullptr, (EPropertyFlags)0x002008000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemyBase, TriggerBox), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AEnemyBase_Statics::NewProp_TriggerBox_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyBase_Statics::NewProp_TriggerBox_MetaData)) };
@@ -216,7 +216,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemyBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemyBase, 1693108304);
+	IMPLEMENT_CLASS(AEnemyBase, 3056815447);
 	template<> PLATFORMER2D_API UClass* StaticClass<AEnemyBase>()
 	{
 		return AEnemyBase::StaticClass();

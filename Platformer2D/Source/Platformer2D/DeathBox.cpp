@@ -33,11 +33,9 @@ void ADeathBox::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AA
 {
 	APlayerCharacter* playerCharacter = Cast<APlayerCharacter>(OtherActor);
 
-	GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Orange, FString::Printf(TEXT("Collision Detected")));
 	//if the colliding actor is the player, display the death screen
 	if (playerCharacter != nullptr)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Orange, FString::Printf(TEXT("It Was A Player")));
 		playerCharacter->OnPlayerDeath();
 
 		//display the death screen on the widget
