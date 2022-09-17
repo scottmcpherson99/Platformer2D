@@ -2,11 +2,11 @@
   Building Platformer2DEditor...
   Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
   Building 4 actions with 16 processes...
-    [1/4] WormEnemy.cpp
-    [2/4] UE4Editor-Platformer2D-0077.lib
-       Creating library D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0077.lib and object D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0077.exp
-    [3/4] UE4Editor-Platformer2D-0077.dll
-       Creating library D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0077.suppressed.lib and object D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0077.suppressed.exp
+    [1/4] Spring.cpp
+    [2/4] UE4Editor-Platformer2D-0105.lib
+       Creating library D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0105.lib and object D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0105.exp
+    [3/4] UE4Editor-Platformer2D-0105.dll
+       Creating library D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0105.suppressed.lib and object D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0105.suppressed.exp
     [4/4] Platformer2DEditor.target
-  Total time in Parallel executor: 1.31 seconds
-  Total execution time: 1.76 seconds
+  Total time in Parallel executor: 1.35 seconds
+  Total execution time: 1.79 seconds

@@ -47,4 +47,3 @@ void ADeathBox::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AA
 		}
 	}
 }
-

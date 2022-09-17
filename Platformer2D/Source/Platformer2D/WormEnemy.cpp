@@ -42,9 +42,6 @@ void AWormEnemy::BeginPlay()
 	detectionBox->OnComponentBeginOverlap.AddDynamic(this, &AWormEnemy::OnComponentBeginOverlap);
 	detectionBox->OnComponentEndOverlap.AddDynamic(this, &AWormEnemy::OnComponentEndOverlap);
 
-	
-
-
 	//run the timeline of the bezier curve from the start and repeat upon completion
 	if (BezierCurveFloat)
 	{
@@ -61,6 +58,7 @@ void AWormEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	//run the timeline
 	BezierCurveTimeline.TickTimeline(DeltaTime);
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -95,6 +93,7 @@ void AWormEnemy::FindControlPoints()
 	switch (currentState_)
 	{
 	case EWormAIState::EWANDER:
+		//set the starting control point to be the current location and pick two random points within the boundaries to be the second and third control points
 		ControlPoints[0] = TriggerBox->GetComponentLocation();;
 		for (int i = 1; i < 3; i++)
 		{

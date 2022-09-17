@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Platformer2D.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{31386CE9-4B9D-4AEE-B3C1-B70DC9A5914D}</UniqueIdentifier>
+      <UniqueIdentifier>{648476BE-89C7-4C07-B33D-ACF48FA4ECFE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Platformer2D.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{7F463B90-F669-4DB7-8CDA-7FCD111C3997}</UniqueIdentifier>
+      <UniqueIdentifier>{D463F275-0B1B-4297-971E-1F424F20623F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Platformer2D">
-      <UniqueIdentifier>{71A7D2D9-0FA2-439B-954D-E4BE90707551}</UniqueIdentifier>
+      <UniqueIdentifier>{8F8B7BDD-2FFA-46EE-8308-D87BC9A978E4}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Platformer2D\AudioManager.cpp">
       <Filter>Source\Platformer2D</Filter>
@@ -107,6 +107,12 @@
     <ClInclude Include="..\..\Source\Platformer2D\InPlayGameModeBase.h">
       <Filter>Source\Platformer2D</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Platformer2D\Interactable.cpp">
+      <Filter>Source\Platformer2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Platformer2D\Interactable.h">
+      <Filter>Source\Platformer2D</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Platformer2D\MainMenuGameModeBase.cpp">
       <Filter>Source\Platformer2D</Filter>
     </ClCompile>
@@ -138,6 +144,12 @@
       <Filter>Source\Platformer2D</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Platformer2D\PlayerCharacter.h">
+      <Filter>Source\Platformer2D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Platformer2D\Spring.cpp">
+      <Filter>Source\Platformer2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Platformer2D\Spring.h">
       <Filter>Source\Platformer2D</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Platformer2D\TileBase.cpp">
