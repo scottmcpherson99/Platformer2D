@@ -19,6 +19,8 @@
 
 #include "Kismet/GameplayStatics.h"
 
+#include "Bullet.h"
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Sets default values
@@ -45,13 +47,13 @@ APlayerCharacter::APlayerCharacter()
 	SideViewCameraComponent->bAutoActivate = true;
 	GetCharacterMovement()->bOrientRotationToMovement = false;
 
-	
+	playerFacingRight = true;
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Sets default values
+// Gameplay
 void APlayerCharacter::OnPlayerDeath()
 {
 	//Show the players mouse cursor and disable their movement
@@ -62,6 +64,38 @@ void APlayerCharacter::OnPlayerDeath()
 		playerController->bShowMouseCursor = true;
 
 		DisableInput(playerController);
+	}
+}
+
+
+void APlayerCharacter::ShootBullet()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Shoot Bulet func in player started")));
+	UWorld* world = GetWorld();
+
+	if (world)
+	{
+		//set the spawn parameters
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+		SpawnParams.Instigator = GetInstigator();
+		FVector bulletSpawnerVec;
+
+		bulletSpawnerVec = FVector(GetActorLocation().X, GetActorLocation().Y, GetActorLocation().Z);
+
+		if (playerBullet != nullptr)
+		{
+			if (playerFacingRight == true)
+			{
+				world->SpawnActor<ABullet>(playerBullet, bulletSpawnerVec, FRotator(0.0f, 0.0f, 0.0f), SpawnParams);
+				GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Bullet Fired")));
+			}
+			else if (playerFacingRight == false)
+			{
+				world->SpawnActor<ABullet>(playerBullet, bulletSpawnerVec, FRotator(180.0f, 0.0f, 180.0f), SpawnParams);
+				GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Bullet Fired!")));
+			}
+		}
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -86,7 +120,7 @@ void APlayerCharacter::BeginPlay()
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Player Character Interface
+// Player Character Input
 void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	//set up gameplay key bindings
@@ -132,6 +166,27 @@ void APlayerCharacter::SetLives(float value_)
 const float APlayerCharacter::GetLives() const
 {
 	return lives;
+}
+
+//Output the players direction
+const bool APlayerCharacter::GetPlayerDirection() const
+{
+	return playerFacingRight;
+}
+
+//update the value of the player's bullets
+void APlayerCharacter::SetBullets(float bullets_)
+{
+	bulletsRemaining += bullets_;
+
+	//update the players stats on the widget
+	UpdatePlayerStats();
+}
+
+// Output the bullets remaining
+const float APlayerCharacter::GetBulletsRemaining() const
+{
+	return bulletsRemaining;
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -193,16 +248,31 @@ void APlayerCharacter::MoveRight(float movementValue_)
 			SetIdleAnimation();
 		}
 	}
+
+	if (movementValue_ < 0.f)
+	{
+		playerFacingRight = false;
+	}
+	else if (movementValue_ > 0.f)
+	{
+		playerFacingRight = true;
+	}
+
 }
 
 void APlayerCharacter::Attack()
 {
-	//play the attacking animation
-	UpdateAnimation(AttackAnimation);
-	isAnimPlaying = true;
+	if (bulletsRemaining > 0)
+	{
+		//play the attacking animation
+		UpdateAnimation(AttackAnimation);
+		isAnimPlaying = true;
 
-	GetWorldTimerManager().SetTimer(animationTimer, this, &APlayerCharacter::SetIdleAnimation, 0.47f, false);
-	
+		//shoot the bullet from the player
+		GetWorldTimerManager().SetTimer(animationTimer, this, &APlayerCharacter::SetIdleAnimation, 0.47f, false);
+		ShootBullet();
+		SetBullets(-1);
+	}
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -280,7 +350,7 @@ void APlayerCharacter::UpdatePlayerStats()
 	AInPlayGameModeBase* gameMode = (AInPlayGameModeBase*)GetWorld()->GetAuthGameMode();
 	if (gameMode)
 	{
-		gameMode->UpdatePlayerStats(coins, lives);
+		gameMode->UpdatePlayerStats(coins, lives, bulletsRemaining);
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

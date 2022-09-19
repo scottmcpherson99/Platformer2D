@@ -46,6 +46,9 @@ public:
 
 	//update the text displaying the players lives
 	void UpdatePlayerLives(float lives_);
+
+	//update the text displaying the players coins
+	void UpdatePlayerBullets(float bullets_);
 	// </UpdatePlayerStats>
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -61,15 +64,19 @@ public:
 protected:
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// <Components>
-	//button that will start a new game
+	//text to show the players coins
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 		class UTextBlock* PlayerCoins;
 
-	//button that will show the game settings
+	//text to show the players lives
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 		class UTextBlock* PlayerLives;
 
-	//animation to be played upon players death
+	//text to show the players bullets
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
+		class UTextBlock* PlayerBullets;
+
+	//death screen hud to be played upon players death
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 		class UDeathScreen* deathScreenHUD;
 	// </Components>

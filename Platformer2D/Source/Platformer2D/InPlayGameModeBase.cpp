@@ -59,10 +59,11 @@ void AInPlayGameModeBase::BeginPlay()
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Widgets
-void AInPlayGameModeBase::UpdatePlayerStats(float coins_, float lives_)
+void AInPlayGameModeBase::UpdatePlayerStats(float coins_, float lives_, float bulletsRemaining_)
 {
 	gameWidget->UpdatePlayerCoins(coins_);
 	gameWidget->UpdatePlayerLives(lives_);
+	gameWidget->UpdatePlayerBullets(bulletsRemaining_);
 }
 
 void AInPlayGameModeBase::PlayFadeOut()

@@ -20,7 +20,7 @@ public:
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// <Widgets>
-	void UpdatePlayerStats(float coins_, float lives_);
+	void UpdatePlayerStats(float coins_, float lives_, float bulletsRemaining_);
 
 	void PlayFadeOut();
 	// </Widgets>

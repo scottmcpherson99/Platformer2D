@@ -2,6 +2,7 @@
 
 
 #include "MainMenuWidget.h"
+#include "ControlsWidget.h"
 
 #include "MainMenuGameModeBase.h"
 
@@ -14,8 +15,13 @@
 // <ButtonFunctions>
 void UMainMenuWidget::OnNewGameClicked()
 {
-	//open the 1st level
-	UGameplayStatics::OpenLevel(GetWorld(), "Level1");
+	FadeImage->SetVisibility(ESlateVisibility::Visible);
+	//fade the widget into black
+	PlayFadeOutAnimation();
+
+	//start the first level
+	GetWorld()->GetTimerManager().SetTimer(FadeOutTimer, this, &UMainMenuWidget::OnNewLevel, FadeOutAnimation->GetEndTime(), true);
+	
 }
 
 void UMainMenuWidget::OnQuitClicked()
@@ -24,15 +30,43 @@ void UMainMenuWidget::OnQuitClicked()
 	UKismetSystemLibrary::QuitGame(GetWorld(), UGameplayStatics::GetPlayerController(GetWorld(), 0), EQuitPreference::Quit, true);
 }
 
-void UMainMenuWidget::OnOptionsClicked()
+void UMainMenuWidget::OnControlsClicked()
 {
+	controlsWidgetHUD->SetVisibility(ESlateVisibility::Visible);
+	BackButton->SetVisibility(ESlateVisibility::Visible);
+	NewGameButton->SetVisibility(ESlateVisibility::Hidden);
+	ControlsButton->SetVisibility(ESlateVisibility::Hidden);
+	HowToPlayButton->SetVisibility(ESlateVisibility::Hidden);
+	QuitButton->SetVisibility(ESlateVisibility::Hidden);
+	TitleBlock->SetVisibility(ESlateVisibility::Hidden);
+	TitleBlock2->SetVisibility(ESlateVisibility::Hidden);
+}
 
+void UMainMenuWidget::OnHowToPlayClicked()
+{
+}
+void UMainMenuWidget::OnBackClicked()
+{
+	OnStart();
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 // <UMainMenuWidget>
+void UMainMenuWidget::OnStart()
+{
+	FadeImage->SetVisibility(ESlateVisibility::Hidden);
+	controlsWidgetHUD->SetVisibility(ESlateVisibility::Hidden);
+	BackButton->SetVisibility(ESlateVisibility::Hidden);
+	NewGameButton->SetVisibility(ESlateVisibility::Visible);
+	ControlsButton->SetVisibility(ESlateVisibility::Visible);
+	HowToPlayButton->SetVisibility(ESlateVisibility::Visible);
+	QuitButton->SetVisibility(ESlateVisibility::Visible);
+	TitleBlock->SetVisibility(ESlateVisibility::Visible);
+	TitleBlock2->SetVisibility(ESlateVisibility::Visible);
+}
+
 void UMainMenuWidget::NativeConstruct()
 {
 	//if the new game button has been clicked
@@ -48,25 +82,38 @@ void UMainMenuWidget::NativeConstruct()
 	}
 
 	//if the options button has been clicked
-	if (OptionsButton)
+	if (ControlsButton)
 	{
-		OptionsButton->OnClicked.AddDynamic(this, &UMainMenuWidget::OnOptionsClicked);
+		ControlsButton->OnClicked.AddDynamic(this, &UMainMenuWidget::OnControlsClicked);
+	}
+
+	//if the how to play button has been clicked
+	if (HowToPlayButton)
+	{
+		HowToPlayButton->OnClicked.AddDynamic(this, &UMainMenuWidget::OnHowToPlayClicked);
+	}
+
+	//display the main menu hud
+	if (BackButton)
+	{
+		BackButton->OnClicked.AddDynamic(this, &UMainMenuWidget::OnBackClicked);
 	}
 }
 
-void UMainMenuWidget::OnStart()
+
+void UMainMenuWidget::OnNewLevel()
 {
-	//play the main title animation
-	GetWorld()->GetTimerManager().SetTimer(mainMenuTitleTimer, this, &UMainMenuWidget::PlayTitleAnimation, TitleAnimation->GetEndTime(), true);
+	//open the 1st level
+	UGameplayStatics::OpenLevel(GetWorld(), "Level1");
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 // <Animation>
-void UMainMenuWidget::PlayTitleAnimation()
+void UMainMenuWidget::PlayFadeOutAnimation()
 {
 	//play the title animation
-	PlayAnimation(TitleAnimation, 0.f, 1.f, EUMGSequencePlayMode::Forward, 1.f, false);
+	PlayAnimation(FadeOutAnimation, 0.f, 1.f, EUMGSequencePlayMode::Forward, 1.f, false);
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////

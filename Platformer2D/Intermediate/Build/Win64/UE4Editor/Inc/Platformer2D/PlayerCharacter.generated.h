@@ -67,6 +67,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerCharacter); \
 	FORCEINLINE static uint32 __PPO__JumpingAnimation() { return STRUCT_OFFSET(APlayerCharacter, JumpingAnimation); } \
 	FORCEINLINE static uint32 __PPO__AttackAnimation() { return STRUCT_OFFSET(APlayerCharacter, AttackAnimation); } \
 	FORCEINLINE static uint32 __PPO__CheerAnimation() { return STRUCT_OFFSET(APlayerCharacter, CheerAnimation); } \
+	FORCEINLINE static uint32 __PPO__playerBullet() { return STRUCT_OFFSET(APlayerCharacter, playerBullet); } \
 	FORCEINLINE static uint32 __PPO__audioManager() { return STRUCT_OFFSET(APlayerCharacter, audioManager); } \
 	FORCEINLINE static uint32 __PPO__jumpingSound() { return STRUCT_OFFSET(APlayerCharacter, jumpingSound); }
 

@@ -18,6 +18,11 @@ void UGameHUD::UpdatePlayerLives(float lives_)
 	PlayerLives->SetText(FText::AsNumber(lives_));
 }
 
+void UGameHUD::UpdatePlayerBullets(float bullets_)
+{
+	PlayerBullets->SetText(FText::AsNumber(bullets_));
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -31,6 +36,7 @@ void UGameHUD::OnStart()
 	deathScreenHUD->SetVisibility(ESlateVisibility::Hidden);
 	PlayerLives->SetVisibility(ESlateVisibility::Visible);
 	PlayerCoins->SetVisibility(ESlateVisibility::Visible);
+	PlayerBullets->SetVisibility(ESlateVisibility::Visible);
 }
 
 void UGameHUD::OnComplete()
@@ -38,6 +44,7 @@ void UGameHUD::OnComplete()
 	//play the fade out animation
 	PlayAnimation(FadeOutAnimation, 0.f, 1.f, EUMGSequencePlayMode::Forward, 1.f, false);
 	PlayerLives->SetVisibility(ESlateVisibility::Visible);
+	PlayerBullets->SetVisibility(ESlateVisibility::Visible);
 	PlayerCoins->SetVisibility(ESlateVisibility::Visible);
 
 }
@@ -48,7 +55,7 @@ void UGameHUD::OnPlayerDeath()
 	PlayAnimation(DeathAnimation, 0.f, 1.f, EUMGSequencePlayMode::Forward, 1.f, false);
 	deathScreenHUD->SetVisibility(ESlateVisibility::Visible);
 	PlayerLives->SetVisibility(ESlateVisibility::Hidden);
+	PlayerBullets->SetVisibility(ESlateVisibility::Hidden);
 	PlayerCoins->SetVisibility(ESlateVisibility::Hidden);
-
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////

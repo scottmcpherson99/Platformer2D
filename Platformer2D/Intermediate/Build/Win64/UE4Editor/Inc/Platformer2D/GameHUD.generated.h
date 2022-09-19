@@ -63,6 +63,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UGameHUD); \
 #define Platformer2D_Source_Platformer2D_GameHUD_h_18_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__PlayerCoins() { return STRUCT_OFFSET(UGameHUD, PlayerCoins); } \
 	FORCEINLINE static uint32 __PPO__PlayerLives() { return STRUCT_OFFSET(UGameHUD, PlayerLives); } \
+	FORCEINLINE static uint32 __PPO__PlayerBullets() { return STRUCT_OFFSET(UGameHUD, PlayerBullets); } \
 	FORCEINLINE static uint32 __PPO__deathScreenHUD() { return STRUCT_OFFSET(UGameHUD, deathScreenHUD); }
 
 

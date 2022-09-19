@@ -55,6 +55,10 @@ void EmptyLinkFunctionForGeneratedCodeGameHUD() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PlayerLives;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayerBullets_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PlayerBullets;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_deathScreenHUD_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_deathScreenHUD;
@@ -104,10 +108,10 @@ void EmptyLinkFunctionForGeneratedCodeGameHUD() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerCoins_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "GameHUD" },
-		{ "Comment", "///////////////////////////////////////////////////////////////////////////////////////////////////////////\n// <Components>\n//button that will start a new game\n" },
+		{ "Comment", "///////////////////////////////////////////////////////////////////////////////////////////////////////////\n// <Components>\n//text to show the players coins\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "GameHUD.h" },
-		{ "ToolTip", "<Components>\nbutton that will start a new game" },
+		{ "ToolTip", "<Components>\ntext to show the players coins" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerCoins = { "PlayerCoins", nullptr, (EPropertyFlags)0x002008000008001c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameHUD, PlayerCoins), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerCoins_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerCoins_MetaData)) };
@@ -115,21 +119,32 @@ void EmptyLinkFunctionForGeneratedCodeGameHUD() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerLives_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "GameHUD" },
-		{ "Comment", "//button that will show the game settings\n" },
+		{ "Comment", "//text to show the players lives\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "GameHUD.h" },
-		{ "ToolTip", "button that will show the game settings" },
+		{ "ToolTip", "text to show the players lives" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerLives = { "PlayerLives", nullptr, (EPropertyFlags)0x002008000008001c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameHUD, PlayerLives), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerLives_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerLives_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerBullets_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "GameHUD" },
+		{ "Comment", "//text to show the players bullets\n" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "GameHUD.h" },
+		{ "ToolTip", "text to show the players bullets" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerBullets = { "PlayerBullets", nullptr, (EPropertyFlags)0x002008000008001c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameHUD, PlayerBullets), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerBullets_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerBullets_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameHUD_Statics::NewProp_deathScreenHUD_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "GameHUD" },
-		{ "Comment", "//animation to be played upon players death\n" },
+		{ "Comment", "//death screen hud to be played upon players death\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "GameHUD.h" },
-		{ "ToolTip", "animation to be played upon players death" },
+		{ "ToolTip", "death screen hud to be played upon players death" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameHUD_Statics::NewProp_deathScreenHUD = { "deathScreenHUD", nullptr, (EPropertyFlags)0x002008000008001c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameHUD, deathScreenHUD), Z_Construct_UClass_UDeathScreen_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameHUD_Statics::NewProp_deathScreenHUD_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameHUD_Statics::NewProp_deathScreenHUD_MetaData)) };
@@ -139,6 +154,7 @@ void EmptyLinkFunctionForGeneratedCodeGameHUD() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameHUD_Statics::NewProp_DeathAnimation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerCoins,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerLives,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameHUD_Statics::NewProp_PlayerBullets,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameHUD_Statics::NewProp_deathScreenHUD,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGameHUD_Statics::StaticCppClassTypeInfo = {
@@ -168,7 +184,7 @@ void EmptyLinkFunctionForGeneratedCodeGameHUD() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGameHUD, 2117608178);
+	IMPLEMENT_CLASS(UGameHUD, 545862512);
 	template<> PLATFORMER2D_API UClass* StaticClass<UGameHUD>()
 	{
 		return UGameHUD::StaticClass();
