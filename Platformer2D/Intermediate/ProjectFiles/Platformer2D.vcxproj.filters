@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Platformer2D.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{B214EC6E-59A7-468C-A7EA-CAF97435C20F}</UniqueIdentifier>
+      <UniqueIdentifier>{1490FCBC-DE7F-408A-9D30-CE9F0E817F17}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Platformer2D.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{A72F42E8-49B8-4BD4-B449-7A5F30C74871}</UniqueIdentifier>
+      <UniqueIdentifier>{6CD47B9B-E77D-47A8-A243-A3B466AD303F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Platformer2D">
-      <UniqueIdentifier>{9FE2C70B-87E2-4A70-9299-CD7D2D385431}</UniqueIdentifier>
+      <UniqueIdentifier>{FE63CD53-BE4E-4204-B066-BDF49ECFD109}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Platformer2D\AudioManager.cpp">
       <Filter>Source\Platformer2D</Filter>
@@ -59,12 +59,6 @@
     <ClInclude Include="..\..\Source\Platformer2D\Bullet.h">
       <Filter>Source\Platformer2D</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Platformer2D\CloudEnemy.cpp">
-      <Filter>Source\Platformer2D</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Platformer2D\CloudEnemy.h">
-      <Filter>Source\Platformer2D</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\Platformer2D\Coin.cpp">
       <Filter>Source\Platformer2D</Filter>
     </ClCompile>
@@ -93,6 +87,12 @@
       <Filter>Source\Platformer2D</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Platformer2D\DeathScreen.h">
+      <Filter>Source\Platformer2D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Platformer2D\Door.cpp">
+      <Filter>Source\Platformer2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Platformer2D\Door.h">
       <Filter>Source\Platformer2D</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Platformer2D\DumbEnemy.cpp">
@@ -129,6 +129,12 @@
       <Filter>Source\Platformer2D</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Platformer2D\Interactable.h">
+      <Filter>Source\Platformer2D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Platformer2D\KeyPickup.cpp">
+      <Filter>Source\Platformer2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Platformer2D\KeyPickup.h">
       <Filter>Source\Platformer2D</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Platformer2D\MainMenuGameModeBase.cpp">

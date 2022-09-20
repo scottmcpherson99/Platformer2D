@@ -19,18 +19,18 @@ public:
 
 protected:
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// <APlayerCharacter>
+	// <ABullet>
 	virtual void BeginPlay();
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	// </APlayerCharacter>
+	// </ABullet>
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// <Components>
-	// bullet animation
+	// bullet sprite
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = SpriteComponent)
 		class UPaperSpriteComponent* bulletSprite;
 
@@ -38,7 +38,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Movement)
 		class UProjectileMovementComponent* projectileMovement;
 
-	//trigger box to check for collisions with the player
+	//trigger box to check for collisions with the bullet
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Collision")
 		class UBoxComponent* TriggerBox;
 	// </Components>

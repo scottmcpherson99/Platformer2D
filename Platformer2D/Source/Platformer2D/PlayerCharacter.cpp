@@ -48,6 +48,8 @@ APlayerCharacter::APlayerCharacter()
 	GetCharacterMovement()->bOrientRotationToMovement = false;
 
 	playerFacingRight = true;
+
+	hasKey = false;
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -70,7 +72,6 @@ void APlayerCharacter::OnPlayerDeath()
 
 void APlayerCharacter::ShootBullet()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Shoot Bulet func in player started")));
 	UWorld* world = GetWorld();
 
 	if (world)
@@ -88,12 +89,10 @@ void APlayerCharacter::ShootBullet()
 			if (playerFacingRight == true)
 			{
 				world->SpawnActor<ABullet>(playerBullet, bulletSpawnerVec, FRotator(0.0f, 0.0f, 0.0f), SpawnParams);
-				GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Bullet Fired")));
 			}
 			else if (playerFacingRight == false)
 			{
 				world->SpawnActor<ABullet>(playerBullet, bulletSpawnerVec, FRotator(180.0f, 0.0f, 180.0f), SpawnParams);
-				GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Bullet Fired!")));
 			}
 		}
 	}
@@ -187,6 +186,16 @@ void APlayerCharacter::SetBullets(float bullets_)
 const float APlayerCharacter::GetBulletsRemaining() const
 {
 	return bulletsRemaining;
+}
+
+void APlayerCharacter::SetHasPlayerGotKey(bool hasKey_)
+{
+	hasKey = hasKey_;
+}
+
+const bool APlayerCharacter::GetHasPlayerGotKey() const
+{
+	return hasKey;
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

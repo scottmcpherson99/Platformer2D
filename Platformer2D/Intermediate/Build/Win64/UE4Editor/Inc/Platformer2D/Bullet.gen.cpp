@@ -172,10 +172,10 @@ void EmptyLinkFunctionForGeneratedCodeBullet() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABullet_Statics::NewProp_bulletSprite_MetaData[] = {
 		{ "Category", "SpriteComponent" },
-		{ "Comment", "///////////////////////////////////////////////////////////////////////////////////////////////////////////\n// <Components>\n// bullet animation\n" },
+		{ "Comment", "///////////////////////////////////////////////////////////////////////////////////////////////////////////\n// <Components>\n// bullet sprite\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Bullet.h" },
-		{ "ToolTip", "<Components>\nbullet animation" },
+		{ "ToolTip", "<Components>\nbullet sprite" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABullet_Statics::NewProp_bulletSprite = { "bulletSprite", nullptr, (EPropertyFlags)0x002008000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABullet, bulletSprite), Z_Construct_UClass_UPaperSpriteComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABullet_Statics::NewProp_bulletSprite_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABullet_Statics::NewProp_bulletSprite_MetaData)) };
@@ -192,10 +192,10 @@ void EmptyLinkFunctionForGeneratedCodeBullet() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABullet_Statics::NewProp_TriggerBox_MetaData[] = {
 		{ "Category", "Collision" },
-		{ "Comment", "//trigger box to check for collisions with the player\n" },
+		{ "Comment", "//trigger box to check for collisions with the bullet\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Bullet.h" },
-		{ "ToolTip", "trigger box to check for collisions with the player" },
+		{ "ToolTip", "trigger box to check for collisions with the bullet" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABullet_Statics::NewProp_TriggerBox = { "TriggerBox", nullptr, (EPropertyFlags)0x002008000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABullet, TriggerBox), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABullet_Statics::NewProp_TriggerBox_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABullet_Statics::NewProp_TriggerBox_MetaData)) };
@@ -231,7 +231,7 @@ void EmptyLinkFunctionForGeneratedCodeBullet() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABullet, 453274622);
+	IMPLEMENT_CLASS(ABullet, 3946636359);
 	template<> PLATFORMER2D_API UClass* StaticClass<ABullet>()
 	{
 		return ABullet::StaticClass();

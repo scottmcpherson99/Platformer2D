@@ -50,6 +50,12 @@ public:
 
 	//get the bullets remaining
 		const float GetBulletsRemaining() const;
+
+	// Update the value of whether the player has the key
+		void SetHasPlayerGotKey(bool hasKey_);
+
+	// Output if the player has the key
+		const bool GetHasPlayerGotKey() const;
 	// </GettersandSetters>
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -210,6 +216,9 @@ private:
 
 		//player bullets remaining
 		float bulletsRemaining = 3;
+
+		//check if the player has a key
+		bool hasKey;
 		// </Attributes>
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////
 };

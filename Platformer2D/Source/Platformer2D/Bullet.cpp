@@ -23,7 +23,7 @@ ABullet::ABullet()
 	TriggerBox = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComp"));
 	TriggerBox->SetupAttachment(RootComponent);
 
-	//create flipbook component
+	//create sprite component
 	bulletSprite = CreateDefaultSubobject<UPaperSpriteComponent>(TEXT("BulletSprite"));
 	bulletSprite->SetEnableGravity(false);
 	bulletSprite->AttachTo(TriggerBox);
@@ -31,25 +31,30 @@ ABullet::ABullet()
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Bullet Interface
 void ABullet::BeginPlay()
 {
 	Super::BeginPlay();
 
 	//turn on collision checks
 	TriggerBox->OnComponentBeginOverlap.AddDynamic(this, &ABullet::OnTriggerBoxOverlap);
-	GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Bullet Spawned!")));
 }
 
 void ABullet::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Collision
 void ABullet::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	AEnemyBase* enemy = Cast<AEnemyBase>(OtherActor);
 	APlayerCharacter* playerCharacter = Cast<APlayerCharacter>(OtherActor);
-	GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Overlap occured!")));
+
 	//if the colliding actor is an enemy then destroy the bullet and the enemy
 	if (enemy != nullptr)
 	{
@@ -68,3 +73,4 @@ void ABullet::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AAct
 		Destroy();
 	}
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
