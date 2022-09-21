@@ -420,7 +420,7 @@ void EmptyLinkFunctionForGeneratedCodeWormEnemy() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWormEnemy, 4140448975);
+	IMPLEMENT_CLASS(AWormEnemy, 3667128443);
 	template<> PLATFORMER2D_API UClass* StaticClass<AWormEnemy>()
 	{
 		return AWormEnemy::StaticClass();

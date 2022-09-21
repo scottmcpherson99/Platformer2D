@@ -6,6 +6,7 @@
 #include "InPlayGameModeBase.h"
 
 #include "PaperSpriteComponent.h"
+#include "PaperFlipbookComponent.h"
 
 #include "PlayerCharacter.h"
 
@@ -16,8 +17,8 @@
 AEnemyBase::AEnemyBase()
 {
 	//create the flagpole mesh
-	enemyMesh = CreateDefaultSubobject<UPaperSpriteComponent>(TEXT("enemyMesh"));
-	enemyMesh->SetupAttachment(RootComponent);
+	enemyMeshFlipbook = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("enemyMeshFlipbook"));
+	enemyMeshFlipbook->SetupAttachment(RootComponent);
 
 	TriggerBox = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComp"));
 	TriggerBox->SetupAttachment(RootComponent);

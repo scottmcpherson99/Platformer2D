@@ -31,7 +31,7 @@ protected:
 	// <Components>
 	//the enemy sprite
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Sprite)
-		class UPaperSpriteComponent* enemyMesh;
+		class UPaperFlipbookComponent* enemyMeshFlipbook;
 
 	//trigger box to check for collisions with the player
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Collision")

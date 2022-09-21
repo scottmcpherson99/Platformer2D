@@ -70,7 +70,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AEnemyBase); \
 
 
 #define Platformer2D_Source_Platformer2D_EnemyBase_h_15_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__enemyMesh() { return STRUCT_OFFSET(AEnemyBase, enemyMesh); } \
+	FORCEINLINE static uint32 __PPO__enemyMeshFlipbook() { return STRUCT_OFFSET(AEnemyBase, enemyMeshFlipbook); } \
 	FORCEINLINE static uint32 __PPO__TriggerBox() { return STRUCT_OFFSET(AEnemyBase, TriggerBox); }
 
 

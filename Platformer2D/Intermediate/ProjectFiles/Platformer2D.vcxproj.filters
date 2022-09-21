@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Platformer2D.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{1490FCBC-DE7F-408A-9D30-CE9F0E817F17}</UniqueIdentifier>
+      <UniqueIdentifier>{0300A3F1-5208-4673-9584-3CA03165FF3E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Platformer2D.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{6CD47B9B-E77D-47A8-A243-A3B466AD303F}</UniqueIdentifier>
+      <UniqueIdentifier>{00C3D22A-AB99-46F9-A41E-174B14AD0EF1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Platformer2D">
-      <UniqueIdentifier>{FE63CD53-BE4E-4204-B066-BDF49ECFD109}</UniqueIdentifier>
+      <UniqueIdentifier>{C6FD9057-B54E-43D7-9959-4BD302EDD1A9}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Platformer2D\AudioManager.cpp">
       <Filter>Source\Platformer2D</Filter>
@@ -180,6 +180,12 @@
       <Filter>Source\Platformer2D</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Platformer2D\TileBase.h">
+      <Filter>Source\Platformer2D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Platformer2D\Wall.cpp">
+      <Filter>Source\Platformer2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Platformer2D\Wall.h">
       <Filter>Source\Platformer2D</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Platformer2D\WormEnemy.cpp">
