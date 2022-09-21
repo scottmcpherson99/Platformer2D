@@ -1,25 +1,19 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Unreal Projects\PlatformerJuly22\Platformer2D).
   Parsing headers for Platformer2DEditor
     Running UnrealHeaderTool "D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Platformer2D.uproject" "D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\Platformer2DEditor\Development\Platformer2DEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\scott\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  Reflection code generated for Platformer2DEditor in 11.062083 seconds
+  Reflection code generated for Platformer2DEditor in 3.4515602 seconds
   Building Platformer2DEditor...
   Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 13 actions with 16 processes...
-    [1/13] Platformer2D.init.gen.cpp
-    [2/13] Bullet.cpp
-D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D\Bullet.cpp(29): warning C4996: 'USceneComponent::AttachTo': This function is deprecated, please use AttachToComponent instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
-    [3/13] DumbEnemy.cpp
-    [4/13] EnemyBase.cpp
-    [5/13] BezierEnemy.cpp
-    [6/13] DumbEnemy.gen.cpp
-    [7/13] WormEnemy.cpp
-    [8/13] EnemyBase.gen.cpp
-    [9/13] WormEnemy.gen.cpp
-    [10/13] BezierEnemy.gen.cpp
-    [11/13] UE4Editor-Platformer2D-0025.lib
-       Creating library D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0025.lib and object D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0025.exp
-    [12/13] UE4Editor-Platformer2D-0025.dll
-       Creating library D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0025.suppressed.lib and object D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0025.suppressed.exp
-    [13/13] Platformer2DEditor.target
-  Total time in Parallel executor: 262.90 seconds
-  Total execution time: 279.69 seconds
+  Building 8 actions with 16 processes...
+    [1/8] Platformer2D.init.gen.cpp
+    [2/8] MainMenuGameModeBase.gen.cpp
+    [3/8] MainMenuWidget.gen.cpp
+    [4/8] MainMenuGameModeBase.cpp
+    [5/8] MainMenuWidget.cpp
+    [6/8] UE4Editor-Platformer2D-0035.lib
+       Creating library D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0035.lib and object D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0035.exp
+    [7/8] UE4Editor-Platformer2D-0035.dll
+       Creating library D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0035.suppressed.lib and object D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0035.suppressed.exp
+    [8/8] Platformer2DEditor.target
+  Total time in Parallel executor: 127.81 seconds
+  Total execution time: 131.82 seconds

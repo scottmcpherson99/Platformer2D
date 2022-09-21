@@ -8,6 +8,8 @@
 
 #include "AudioManager.h"
 
+#include "SaveGameStats.h"
+
 #include "Kismet/GameplayStatics.h"
 
 #include "Blueprint/UserWidget.h"
@@ -56,6 +58,40 @@ void AMainMenuGameModeBase::BeginPlay()
 		{
 			audioManagerHandler->PlayLoopingAudio(backgroundMusic);
 		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Save Game
+void AMainMenuGameModeBase::CreateNewGame()
+{
+	//create a new save game slot
+	savePlayerStats = Cast<USaveGameStats>(UGameplayStatics::CreateSaveGameObject(USaveGameStats::StaticClass()));
+	
+	//set the default values
+	if (savePlayerStats != nullptr)
+	{
+		savePlayerStats->SetLives(3);
+		savePlayerStats->SetCoins(0);
+		savePlayerStats->SetBullets(0);
+		savePlayerStats->SetLevelName(FName("Level1"));
+	}
+
+	UGameplayStatics::SaveGameToSlot(savePlayerStats, FString("Slot1"), 0);
+}
+
+void AMainMenuGameModeBase::LoadGame()
+{
+	//check if the save game slot exists, if it load the last played level
+	if (UGameplayStatics::DoesSaveGameExist(FString("Slot1"), 0))
+	{
+		//load the save game slot
+		USaveGameStats* loadGameObj_ = Cast<USaveGameStats>(UGameplayStatics::LoadGameFromSlot(FString("Slot1"), 0));
+
+		//open the level the player was last on
+		UGameplayStatics::OpenLevel(GetWorld(), loadGameObj_->GetPlayerLevel());
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -15,6 +15,13 @@
 // <ButtonFunctions>
 void UMainMenuWidget::OnNewGameClicked()
 {
+	//create a new game save
+	AMainMenuGameModeBase* gameMode = (AMainMenuGameModeBase*)GetWorld()->GetAuthGameMode();
+	if (gameMode)
+	{
+		gameMode->CreateNewGame();
+	}
+
 	FadeImage->SetVisibility(ESlateVisibility::Visible);
 	//fade the widget into black
 	PlayFadeOutAnimation();
@@ -36,15 +43,32 @@ void UMainMenuWidget::OnControlsClicked()
 	BackButton->SetVisibility(ESlateVisibility::Visible);
 	NewGameButton->SetVisibility(ESlateVisibility::Hidden);
 	ControlsButton->SetVisibility(ESlateVisibility::Hidden);
-	HowToPlayButton->SetVisibility(ESlateVisibility::Hidden);
+	LoadGameButton->SetVisibility(ESlateVisibility::Hidden);
 	QuitButton->SetVisibility(ESlateVisibility::Hidden);
 	TitleBlock->SetVisibility(ESlateVisibility::Hidden);
 	TitleBlock2->SetVisibility(ESlateVisibility::Hidden);
 }
 
-void UMainMenuWidget::OnHowToPlayClicked()
+void UMainMenuWidget::OnLoadGameClicked()
 {
+	FadeImage->SetVisibility(ESlateVisibility::Visible);
+	//fade the widget into black
+	PlayFadeOutAnimation();
+
+	//start the first level
+	GetWorld()->GetTimerManager().SetTimer(FadeOutTimer, this, &UMainMenuWidget::LoadGame, FadeOutAnimation->GetEndTime(), true);
 }
+
+void UMainMenuWidget::LoadGame()
+{
+	// get the game mode
+	AMainMenuGameModeBase* gameMode = (AMainMenuGameModeBase*)GetWorld()->GetAuthGameMode();
+	if (gameMode)
+	{
+		gameMode->LoadGame();
+	}
+}
+
 void UMainMenuWidget::OnBackClicked()
 {
 	OnStart();
@@ -61,7 +85,7 @@ void UMainMenuWidget::OnStart()
 	BackButton->SetVisibility(ESlateVisibility::Hidden);
 	NewGameButton->SetVisibility(ESlateVisibility::Visible);
 	ControlsButton->SetVisibility(ESlateVisibility::Visible);
-	HowToPlayButton->SetVisibility(ESlateVisibility::Visible);
+	LoadGameButton->SetVisibility(ESlateVisibility::Visible);
 	QuitButton->SetVisibility(ESlateVisibility::Visible);
 	TitleBlock->SetVisibility(ESlateVisibility::Visible);
 	TitleBlock2->SetVisibility(ESlateVisibility::Visible);
@@ -88,9 +112,9 @@ void UMainMenuWidget::NativeConstruct()
 	}
 
 	//if the how to play button has been clicked
-	if (HowToPlayButton)
+	if (LoadGameButton)
 	{
-		HowToPlayButton->OnClicked.AddDynamic(this, &UMainMenuWidget::OnHowToPlayClicked);
+		LoadGameButton->OnClicked.AddDynamic(this, &UMainMenuWidget::OnLoadGameClicked);
 	}
 
 	//display the main menu hud

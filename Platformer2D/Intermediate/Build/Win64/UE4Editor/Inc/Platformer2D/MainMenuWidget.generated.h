@@ -17,7 +17,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define Platformer2D_Source_Platformer2D_MainMenuWidget_h_20_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execOnBackClicked); \
-	DECLARE_FUNCTION(execOnHowToPlayClicked); \
+	DECLARE_FUNCTION(execOnLoadGameClicked); \
 	DECLARE_FUNCTION(execOnControlsClicked); \
 	DECLARE_FUNCTION(execOnQuitClicked); \
 	DECLARE_FUNCTION(execOnNewGameClicked);
@@ -26,7 +26,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define Platformer2D_Source_Platformer2D_MainMenuWidget_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnBackClicked); \
-	DECLARE_FUNCTION(execOnHowToPlayClicked); \
+	DECLARE_FUNCTION(execOnLoadGameClicked); \
 	DECLARE_FUNCTION(execOnControlsClicked); \
 	DECLARE_FUNCTION(execOnQuitClicked); \
 	DECLARE_FUNCTION(execOnNewGameClicked);
@@ -79,7 +79,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UMainMenuWidget); \
 #define Platformer2D_Source_Platformer2D_MainMenuWidget_h_20_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__NewGameButton() { return STRUCT_OFFSET(UMainMenuWidget, NewGameButton); } \
 	FORCEINLINE static uint32 __PPO__ControlsButton() { return STRUCT_OFFSET(UMainMenuWidget, ControlsButton); } \
-	FORCEINLINE static uint32 __PPO__HowToPlayButton() { return STRUCT_OFFSET(UMainMenuWidget, HowToPlayButton); } \
+	FORCEINLINE static uint32 __PPO__LoadGameButton() { return STRUCT_OFFSET(UMainMenuWidget, LoadGameButton); } \
 	FORCEINLINE static uint32 __PPO__QuitButton() { return STRUCT_OFFSET(UMainMenuWidget, QuitButton); } \
 	FORCEINLINE static uint32 __PPO__BackButton() { return STRUCT_OFFSET(UMainMenuWidget, BackButton); } \
 	FORCEINLINE static uint32 __PPO__TitleBlock() { return STRUCT_OFFSET(UMainMenuWidget, TitleBlock); } \

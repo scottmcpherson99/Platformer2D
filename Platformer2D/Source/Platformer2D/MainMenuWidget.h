@@ -51,7 +51,7 @@ protected:
 
 	//button that will show how to play the game
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
-		class UButton* HowToPlayButton;
+		class UButton* LoadGameButton;
 
 	//button that will exit the application
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
@@ -94,9 +94,11 @@ protected:
 	UFUNCTION()
 		void OnControlsClicked();
 
-	//show the how to play screen
+	// Load the game
 	UFUNCTION()
-		void OnHowToPlayClicked();
+		void OnLoadGameClicked();
+
+	void LoadGame();
 
 	//go back to the main menu
 	UFUNCTION()

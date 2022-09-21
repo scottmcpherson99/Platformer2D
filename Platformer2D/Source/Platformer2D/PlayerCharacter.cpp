@@ -7,6 +7,8 @@
 
 #include "AudioManager.h"
 
+#include "SaveGameStats.h"
+
 #include "Components/InputComponent.h"
 
 #include "GameFramework/CharacterMovementComponent.h"
@@ -114,6 +116,8 @@ void APlayerCharacter::BeginPlay()
 	{
 		audioManagerHandler = Cast<AAudioManager>(UGameplayStatics::GetActorOfClass(GetWorld(), audioManager));
 	}
+
+	LoadPlayerStats();
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -134,13 +138,55 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Save Game
+// Save the players stats
+void APlayerCharacter::SavePlayerStats()
+{
+	//create a new save game object
+	savePlayerStats = Cast<USaveGameStats>(UGameplayStatics::CreateSaveGameObject(USaveGameStats::StaticClass()));
+
+	if (savePlayerStats != nullptr)
+	{
+		//save the new player stats to the save game slot
+		savePlayerStats->SetLives(lives);
+		savePlayerStats->SetCoins(coins);
+		savePlayerStats->SetBullets(bulletsRemaining);
+		savePlayerStats->SetLevelName(FName(UGameplayStatics::GetCurrentLevelName(GetWorld())));
+	}
+
+	//update the save game slot
+	UGameplayStatics::SaveGameToSlot(savePlayerStats, FString("Slot1"), 0);
+}
+
+// Load the players stats
+void APlayerCharacter::LoadPlayerStats()
+{
+	//check if the save game slot exists, if it does apply the values from it to the current player
+	if (UGameplayStatics::DoesSaveGameExist(FString("Slot1"), 0))
+	{
+		//load the save game slot
+		USaveGameStats* loadGameObj_ = Cast<USaveGameStats>(UGameplayStatics::LoadGameFromSlot(FString("Slot1"), 0));
+	
+		//apply the values from the save game slot to the player
+		lives = loadGameObj_->GetLives();
+		coins = loadGameObj_->GetCoins();
+		bulletsRemaining = loadGameObj_->GetBullets();
+
+		UpdatePlayerStats();
+	}
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // <GettersandSetters>
-//update the value of the player's coins
+// Update the value of the player's coins
 void APlayerCharacter::SetCoins(float value_)
 {
 	coins += value_;
+
+	SavePlayerStats();
 
 	//update the players stats on the widget
 	UpdatePlayerStats();
@@ -152,10 +198,12 @@ const float APlayerCharacter::GetCoins() const
 	return coins;
 }
 
-//update the value of the player's lives
+// Update the value of the player's lives
 void APlayerCharacter::SetLives(float value_)
 {
 	lives += value_;
+
+	SavePlayerStats();
 
 	//update the players stats on the widget
 	UpdatePlayerStats();
@@ -167,16 +215,18 @@ const float APlayerCharacter::GetLives() const
 	return lives;
 }
 
-//Output the players direction
+// Output the players direction
 const bool APlayerCharacter::GetPlayerDirection() const
 {
 	return playerFacingRight;
 }
 
-//update the value of the player's bullets
+// Update the value of the player's bullets
 void APlayerCharacter::SetBullets(float bullets_)
 {
 	bulletsRemaining += bullets_;
+
+	SavePlayerStats();
 
 	//update the players stats on the widget
 	UpdatePlayerStats();
@@ -188,11 +238,13 @@ const float APlayerCharacter::GetBulletsRemaining() const
 	return bulletsRemaining;
 }
 
+// Update the value of whether the player has the key
 void APlayerCharacter::SetHasPlayerGotKey(bool hasKey_)
 {
 	hasKey = hasKey_;
 }
 
+// Output whether the player has the key
 const bool APlayerCharacter::GetHasPlayerGotKey() const
 {
 	return hasKey;
@@ -356,8 +408,8 @@ void APlayerCharacter::SetIdleAnimation()
 void APlayerCharacter::UpdatePlayerStats()
 {
 	//find the current gamemode and update the players stats on the displayed widget
-	AInPlayGameModeBase* gameMode = (AInPlayGameModeBase*)GetWorld()->GetAuthGameMode();
-	if (gameMode)
+	AInPlayGameModeBase* gameMode = Cast<AInPlayGameModeBase>((AInPlayGameModeBase*)GetWorld()->GetAuthGameMode());
+	if (gameMode != nullptr)
 	{
 		gameMode->UpdatePlayerStats(coins, lives, bulletsRemaining);
 	}

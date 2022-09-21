@@ -30,11 +30,11 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 		P_THIS->OnBackClicked();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(UMainMenuWidget::execOnHowToPlayClicked)
+	DEFINE_FUNCTION(UMainMenuWidget::execOnLoadGameClicked)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->OnHowToPlayClicked();
+		P_THIS->OnLoadGameClicked();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(UMainMenuWidget::execOnControlsClicked)
@@ -64,7 +64,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "OnBackClicked", &UMainMenuWidget::execOnBackClicked },
 			{ "OnControlsClicked", &UMainMenuWidget::execOnControlsClicked },
-			{ "OnHowToPlayClicked", &UMainMenuWidget::execOnHowToPlayClicked },
+			{ "OnLoadGameClicked", &UMainMenuWidget::execOnLoadGameClicked },
 			{ "OnNewGameClicked", &UMainMenuWidget::execOnNewGameClicked },
 			{ "OnQuitClicked", &UMainMenuWidget::execOnQuitClicked },
 		};
@@ -118,7 +118,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_UMainMenuWidget_OnHowToPlayClicked_Statics
+	struct Z_Construct_UFunction_UMainMenuWidget_OnLoadGameClicked_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -126,19 +126,19 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMainMenuWidget_OnHowToPlayClicked_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//show the how to play screen\n" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMainMenuWidget_OnLoadGameClicked_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// Load the game\n" },
 		{ "ModuleRelativePath", "MainMenuWidget.h" },
-		{ "ToolTip", "show the how to play screen" },
+		{ "ToolTip", "Load the game" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMainMenuWidget_OnHowToPlayClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMainMenuWidget, nullptr, "OnHowToPlayClicked", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMainMenuWidget_OnHowToPlayClicked_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UMainMenuWidget_OnHowToPlayClicked_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UMainMenuWidget_OnHowToPlayClicked()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMainMenuWidget_OnLoadGameClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMainMenuWidget, nullptr, "OnLoadGameClicked", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMainMenuWidget_OnLoadGameClicked_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UMainMenuWidget_OnLoadGameClicked_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UMainMenuWidget_OnLoadGameClicked()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMainMenuWidget_OnHowToPlayClicked_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMainMenuWidget_OnLoadGameClicked_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -214,9 +214,9 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ControlsButton;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HowToPlayButton_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LoadGameButton_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_HowToPlayButton;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_LoadGameButton;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_QuitButton_MetaData[];
 #endif
@@ -252,7 +252,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_UMainMenuWidget_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UMainMenuWidget_OnBackClicked, "OnBackClicked" }, // 2693071451
 		{ &Z_Construct_UFunction_UMainMenuWidget_OnControlsClicked, "OnControlsClicked" }, // 3795223650
-		{ &Z_Construct_UFunction_UMainMenuWidget_OnHowToPlayClicked, "OnHowToPlayClicked" }, // 1972344359
+		{ &Z_Construct_UFunction_UMainMenuWidget_OnLoadGameClicked, "OnLoadGameClicked" }, // 3895296407
 		{ &Z_Construct_UFunction_UMainMenuWidget_OnNewGameClicked, "OnNewGameClicked" }, // 3976869829
 		{ &Z_Construct_UFunction_UMainMenuWidget_OnQuitClicked, "OnQuitClicked" }, // 921431760
 	};
@@ -295,7 +295,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_ControlsButton = { "ControlsButton", nullptr, (EPropertyFlags)0x002008000008001c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMainMenuWidget, ControlsButton), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_ControlsButton_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_ControlsButton_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_HowToPlayButton_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_LoadGameButton_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "MainMenuWidget" },
 		{ "Comment", "//button that will show how to play the game\n" },
@@ -304,7 +304,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 		{ "ToolTip", "button that will show how to play the game" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_HowToPlayButton = { "HowToPlayButton", nullptr, (EPropertyFlags)0x002008000008001c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMainMenuWidget, HowToPlayButton), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_HowToPlayButton_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_HowToPlayButton_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_LoadGameButton = { "LoadGameButton", nullptr, (EPropertyFlags)0x002008000008001c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMainMenuWidget, LoadGameButton), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_LoadGameButton_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_LoadGameButton_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_QuitButton_MetaData[] = {
 		{ "BindWidget", "" },
@@ -375,7 +375,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_FadeOutAnimation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_NewGameButton,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_ControlsButton,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_HowToPlayButton,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_LoadGameButton,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_QuitButton,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_BackButton,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_TitleBlock,
@@ -410,7 +410,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMainMenuWidget, 1148628537);
+	IMPLEMENT_CLASS(UMainMenuWidget, 3201540346);
 	template<> PLATFORMER2D_API UClass* StaticClass<UMainMenuWidget>()
 	{
 		return UMainMenuWidget::StaticClass();
