@@ -7,6 +7,8 @@
 
 #include "Components/BoxComponent.h"
 
+#include "Coin.h"
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Sets default values
 ABreakableTile::ABreakableTile()
@@ -55,6 +57,18 @@ void ABreakableTile::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponen
 // destroy the tile
 void ABreakableTile::DestroyTile()
 {
+	//set the spawn parameters for the drop
+	FActorSpawnParameters SpawnParams;
+	SpawnParams.Owner = this;
+	SpawnParams.Instigator = GetInstigator();
+	FVector spawnVec = GetActorLocation();
+
+	if (coinDrop != nullptr)
+	{
+		//spawn a coin drop
+		GetWorld()->SpawnActor<ACoin>(coinDrop, spawnVec, FRotator(0.0f, 0.0f, 0.0f), SpawnParams);
+	}
+
 	Destroy();
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////

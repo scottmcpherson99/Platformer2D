@@ -20,6 +20,8 @@ void EmptyLinkFunctionForGeneratedCodeBreakableTile() {}
 	ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	PLATFORMER2D_API UClass* Z_Construct_UClass_ACoin_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(ABreakableTile::execOnTriggerBoxOverlap)
@@ -138,6 +140,10 @@ void EmptyLinkFunctionForGeneratedCodeBreakableTile() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_coinDrop_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_coinDrop;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TriggerBox_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_TriggerBox;
@@ -164,6 +170,15 @@ void EmptyLinkFunctionForGeneratedCodeBreakableTile() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABreakableTile_Statics::NewProp_coinDrop_MetaData[] = {
+		{ "Category", "Type of drop to spawn" },
+		{ "Comment", "///////////////////////////////////////////////////////////////////////////////////////////////////////////\n// <Drops>\n" },
+		{ "ModuleRelativePath", "BreakableTile.h" },
+		{ "ToolTip", "<Drops>" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABreakableTile_Statics::NewProp_coinDrop = { "coinDrop", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABreakableTile, coinDrop), Z_Construct_UClass_ACoin_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ABreakableTile_Statics::NewProp_coinDrop_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABreakableTile_Statics::NewProp_coinDrop_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABreakableTile_Statics::NewProp_TriggerBox_MetaData[] = {
 		{ "Category", "Collision" },
 		{ "Comment", "///////////////////////////////////////////////////////////////////////////////////////////////////////////\n// <Collision>\n" },
@@ -185,6 +200,7 @@ void EmptyLinkFunctionForGeneratedCodeBreakableTile() {}
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ABreakableTile_Statics::NewProp_tileStrength = { "tileStrength", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABreakableTile, tileStrength), METADATA_PARAMS(Z_Construct_UClass_ABreakableTile_Statics::NewProp_tileStrength_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABreakableTile_Statics::NewProp_tileStrength_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABreakableTile_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABreakableTile_Statics::NewProp_coinDrop,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABreakableTile_Statics::NewProp_TriggerBox,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABreakableTile_Statics::NewProp_tileStrength,
 	};
@@ -215,7 +231,7 @@ void EmptyLinkFunctionForGeneratedCodeBreakableTile() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABreakableTile, 2812095145);
+	IMPLEMENT_CLASS(ABreakableTile, 89367512);
 	template<> PLATFORMER2D_API UClass* StaticClass<ABreakableTile>()
 	{
 		return ABreakableTile::StaticClass();

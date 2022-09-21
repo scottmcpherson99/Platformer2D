@@ -75,7 +75,7 @@ void AMainMenuGameModeBase::CreateNewGame()
 	{
 		savePlayerStats->SetLives(3);
 		savePlayerStats->SetCoins(0);
-		savePlayerStats->SetBullets(0);
+		savePlayerStats->SetBullets(10);
 		savePlayerStats->SetLevelName(FName("Level1"));
 	}
 

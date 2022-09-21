@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodePlatformer2D_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xAB257F48,
+				0x64D1D38D,
 				0xEEDAD234,
 				METADATA_PARAMS(nullptr, 0)
 			};
