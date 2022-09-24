@@ -8,6 +8,7 @@
 #include "Components/BoxComponent.h"
 
 #include "Coin.h"
+#include "LifeDrop.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Sets default values
@@ -63,10 +64,24 @@ void ABreakableTile::DestroyTile()
 	SpawnParams.Instigator = GetInstigator();
 	FVector spawnVec = GetActorLocation();
 
-	if (coinDrop != nullptr)
+	//if the specified drop if a coin and coinDrop has been defined, spawn the coin
+	if (drop == Drop::Coin)
 	{
-		//spawn a coin drop
-		GetWorld()->SpawnActor<ACoin>(coinDrop, spawnVec, FRotator(0.0f, 0.0f, 0.0f), SpawnParams);
+		if (coinDrop != nullptr)
+		{
+			//spawn a coin drop
+			GetWorld()->SpawnActor<ACoin>(coinDrop, spawnVec, FRotator(0.0f, 0.0f, 0.0f), SpawnParams);
+		}
+	}
+
+	//if the specified drop if a lifedrop and lifeDrop has been defined, spawn the life drop
+	else if (drop == Drop::LifeDrop)
+	{
+		if (lifeDrop != nullptr)
+		{
+			//spawn a life drop
+			GetWorld()->SpawnActor<ALifeDrop>(lifeDrop, spawnVec, FRotator(0.0f, 0.0f, 0.0f), SpawnParams);
+		}
 	}
 
 	Destroy();

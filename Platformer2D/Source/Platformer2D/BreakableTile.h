@@ -6,6 +6,13 @@
 #include "TileBase.h"
 #include "BreakableTile.generated.h"
 
+UENUM()
+enum Drop
+{
+	Coin UMETA(DisplayName = "Coin"),
+	Bullet UMETA(DisplayName = "Bullet"),
+	LifeDrop UMETA(DisplayName = "LifeDrop"),
+};
 /**
  * 
  */
@@ -19,8 +26,17 @@ public:
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// <Drops>
+	//enum to specify what the block should drop 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Type of drop to spawn")
+		TEnumAsByte<Drop> drop;
+
+	// The coin drop
 	UPROPERTY(EditAnywhere, Category = "Type of drop to spawn")
 		TSubclassOf<class ACoin> coinDrop;
+
+	// The life drop
+	UPROPERTY(EditAnywhere, Category = "Type of drop to spawn")
+		TSubclassOf<class ALifeDrop> lifeDrop;
 	// </Drops>
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
