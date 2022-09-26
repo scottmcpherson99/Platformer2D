@@ -29,10 +29,13 @@ D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build
 D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/Bullet.gen.cpp
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D/Bullet.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\Bullet.generated.h
-D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/Coin.gen.cpp
-D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D/Coin.h
+D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/BulletDrop.gen.cpp
+D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D/BulletDrop.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D\Collectable.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\Collectable.generated.h
+D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\BulletDrop.generated.h
+D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/Coin.gen.cpp
+D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D/Coin.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\Coin.generated.h
 D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/Collectable.gen.cpp
 D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/ControlsWidget.gen.cpp
@@ -213,11 +216,25 @@ D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/SaveGame.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SaveGame.generated.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\SaveGameStats.generated.h
+D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/Spike.gen.cpp
+D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D/Spike.h
+D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\Spike.generated.h
 D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/Spring.gen.cpp
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D/Spring.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\Spring.generated.h
 D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/TextRenderer.gen.cpp
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D/TextRenderer.h
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\INCLUDE\map
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\INCLUDE\tuple
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\INCLUDE\xutility
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\INCLUDE\utility
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\INCLUDE\xtree
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\INCLUDE\xmemory
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\INCLUDE\limits
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\INCLUDE\cfloat
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\INCLUDE\cwchar
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\INCLUDE\cstdio
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\INCLUDE\isa_availability.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\TextRenderer.generated.h
 D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/TileBase.gen.cpp
 D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/Wall.gen.cpp

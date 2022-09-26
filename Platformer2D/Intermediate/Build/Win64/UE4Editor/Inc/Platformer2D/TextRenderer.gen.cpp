@@ -13,11 +13,81 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeTextRenderer() {}
 // Cross Module References
+	PLATFORMER2D_API UEnum* Z_Construct_UEnum_Platformer2D_TextRendered();
+	UPackage* Z_Construct_UPackage__Script_Platformer2D();
 	PLATFORMER2D_API UClass* Z_Construct_UClass_ATextRenderer_NoRegister();
 	PLATFORMER2D_API UClass* Z_Construct_UClass_ATextRenderer();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
-	UPackage* Z_Construct_UPackage__Script_Platformer2D();
+	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UTextRenderComponent_NoRegister();
 // End Cross Module References
+	static UEnum* TextRendered_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_Platformer2D_TextRendered, Z_Construct_UPackage__Script_Platformer2D(), TEXT("TextRendered"));
+		}
+		return Singleton;
+	}
+	template<> PLATFORMER2D_API UEnum* StaticEnum<TextRendered>()
+	{
+		return TextRendered_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_TextRendered(TextRendered_StaticEnum, TEXT("/Script/Platformer2D"), TEXT("TextRendered"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_Platformer2D_TextRendered_Hash() { return 3140041718U; }
+	UEnum* Z_Construct_UEnum_Platformer2D_TextRendered()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_Platformer2D();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("TextRendered"), 0, Get_Z_Construct_UEnum_Platformer2D_TextRendered_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "Pickup", (int64)Pickup },
+				{ "EnemyIntro", (int64)EnemyIntro },
+				{ "BreakableTile", (int64)BreakableTile },
+				{ "Movingplatform", (int64)Movingplatform },
+				{ "FallingTile", (int64)FallingTile },
+				{ "Spikes", (int64)Spikes },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "BreakableTile.DisplayName", "BreakableTile" },
+				{ "BreakableTile.Name", "BreakableTile" },
+				{ "EnemyIntro.DisplayName", "EnemyIntro" },
+				{ "EnemyIntro.Name", "EnemyIntro" },
+				{ "FallingTile.DisplayName", "FallingTile" },
+				{ "FallingTile.Name", "FallingTile" },
+				{ "ModuleRelativePath", "TextRenderer.h" },
+				{ "Movingplatform.DisplayName", "MovingPlatform" },
+				{ "Movingplatform.Name", "Movingplatform" },
+				{ "Pickup.DisplayName", "Pickup" },
+				{ "Pickup.Name", "Pickup" },
+				{ "Spikes.DisplayName", "Spikes" },
+				{ "Spikes.Name", "Spikes" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_Platformer2D,
+				nullptr,
+				"TextRendered",
+				"TextRendered",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::Regular,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
 	void ATextRenderer::StaticRegisterNativesATextRenderer()
 	{
 	}
@@ -31,6 +101,19 @@ void EmptyLinkFunctionForGeneratedCodeTextRenderer() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_sceneComp__MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_sceneComp_;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_textRenderComp__MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_textRenderComp_;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_textRendered_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_textRendered;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -44,6 +127,36 @@ void EmptyLinkFunctionForGeneratedCodeTextRenderer() {}
 		{ "ModuleRelativePath", "TextRenderer.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATextRenderer_Statics::NewProp_sceneComp__MetaData[] = {
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "TextRenderer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATextRenderer_Statics::NewProp_sceneComp_ = { "sceneComp_", nullptr, (EPropertyFlags)0x002008000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATextRenderer, sceneComp_), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATextRenderer_Statics::NewProp_sceneComp__MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATextRenderer_Statics::NewProp_sceneComp__MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATextRenderer_Statics::NewProp_textRenderComp__MetaData[] = {
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "TextRenderer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATextRenderer_Statics::NewProp_textRenderComp_ = { "textRenderComp_", nullptr, (EPropertyFlags)0x002008000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATextRenderer, textRenderComp_), Z_Construct_UClass_UTextRenderComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATextRenderer_Statics::NewProp_textRenderComp__MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATextRenderer_Statics::NewProp_textRenderComp__MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATextRenderer_Statics::NewProp_textRendered_MetaData[] = {
+		{ "Category", "Text to render" },
+		{ "Comment", "//enum to specify what text to render\n" },
+		{ "ModuleRelativePath", "TextRenderer.h" },
+		{ "ToolTip", "enum to specify what text to render" },
+	};
+#endif
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_ATextRenderer_Statics::NewProp_textRendered = { "textRendered", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATextRenderer, textRendered), Z_Construct_UEnum_Platformer2D_TextRendered, METADATA_PARAMS(Z_Construct_UClass_ATextRenderer_Statics::NewProp_textRendered_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATextRenderer_Statics::NewProp_textRendered_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATextRenderer_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATextRenderer_Statics::NewProp_sceneComp_,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATextRenderer_Statics::NewProp_textRenderComp_,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATextRenderer_Statics::NewProp_textRendered,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ATextRenderer_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ATextRenderer>::IsAbstract,
 	};
@@ -53,11 +166,11 @@ void EmptyLinkFunctionForGeneratedCodeTextRenderer() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_ATextRenderer_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_ATextRenderer_Statics::PropPointers),
 		0,
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_ATextRenderer_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ATextRenderer_Statics::Class_MetaDataParams))
@@ -71,7 +184,7 @@ void EmptyLinkFunctionForGeneratedCodeTextRenderer() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATextRenderer, 2597001422);
+	IMPLEMENT_CLASS(ATextRenderer, 2682992242);
 	template<> PLATFORMER2D_API UClass* StaticClass<ATextRenderer>()
 	{
 		return ATextRenderer::StaticClass();

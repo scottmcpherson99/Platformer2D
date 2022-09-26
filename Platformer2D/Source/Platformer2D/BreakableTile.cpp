@@ -9,6 +9,7 @@
 
 #include "Coin.h"
 #include "LifeDrop.h"
+#include "BulletDrop.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Sets default values
@@ -84,6 +85,15 @@ void ABreakableTile::DestroyTile()
 		}
 	}
 
+	//if the specified drop if a bulletDrop and bulletDrop has been defined, spawn the life drop
+	else if (drop == Drop::Bullet)
+	{
+		if (bulletDrop != nullptr)
+		{
+			//spawn a bullet drop
+			GetWorld()->SpawnActor<ABulletDrop>(bulletDrop, spawnVec, FRotator(0.0f, 0.0f, 0.0f), SpawnParams);
+		}
+	}
 	Destroy();
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -37,6 +37,10 @@ public:
 	// The life drop
 	UPROPERTY(EditAnywhere, Category = "Type of drop to spawn")
 		TSubclassOf<class ALifeDrop> lifeDrop;
+
+	// The bullet drop
+	UPROPERTY(EditAnywhere, Category = "Type of drop to spawn")
+		TSubclassOf<class ABulletDrop> bulletDrop;
 	// </Drops>
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 

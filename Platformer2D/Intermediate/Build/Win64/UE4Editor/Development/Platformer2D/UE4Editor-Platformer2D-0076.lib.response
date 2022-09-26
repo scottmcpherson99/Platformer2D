@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Platformer2D-0076.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\Platformer2DEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\Module.Platformer2D.cpp.obj"
+"D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\Module.Platformer2D.gen.cpp.obj"
+"D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\Default.rc2.res"
+/OUT:"D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0076.lib"
+/INCLUDE:IMPLEMENT_MODULE_Platformer2D

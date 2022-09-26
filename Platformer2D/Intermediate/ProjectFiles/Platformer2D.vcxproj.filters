@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Platformer2D.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{41C5DAC5-535B-4BB2-BE5F-A2347D7FD95B}</UniqueIdentifier>
+      <UniqueIdentifier>{A3D5BA24-E388-481A-8BEB-2B009F954A5F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Platformer2D.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{1ACDE700-D6A5-4F1A-912F-B10F65AC5624}</UniqueIdentifier>
+      <UniqueIdentifier>{A42699AC-570A-4743-9D14-E7B62EE036DA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Platformer2D">
-      <UniqueIdentifier>{21A930A8-0714-46B3-AF0F-3FF67CBF2A0F}</UniqueIdentifier>
+      <UniqueIdentifier>{7E5EEBDD-82D9-4A86-B1FE-E1FCCD447B8C}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Platformer2D\AudioManager.cpp">
       <Filter>Source\Platformer2D</Filter>
@@ -57,6 +57,12 @@
       <Filter>Source\Platformer2D</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Platformer2D\Bullet.h">
+      <Filter>Source\Platformer2D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Platformer2D\BulletDrop.cpp">
+      <Filter>Source\Platformer2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Platformer2D\BulletDrop.h">
       <Filter>Source\Platformer2D</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Platformer2D\Coin.cpp">
@@ -192,6 +198,12 @@
       <Filter>Source\Platformer2D</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Platformer2D\SaveGameStats.h">
+      <Filter>Source\Platformer2D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Platformer2D\Spike.cpp">
+      <Filter>Source\Platformer2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Platformer2D\Spike.h">
       <Filter>Source\Platformer2D</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Platformer2D\Spring.cpp">
