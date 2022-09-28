@@ -17,7 +17,7 @@ ATextRenderer::ATextRenderer()
 	textRenderComp_ = CreateDefaultSubobject<UTextRenderComponent>(TEXT("textRenderComp_"));
 	textRenderComp_->SetupAttachment(sceneComp_);
 
-	textOutput.insert(std::pair<TextRendered, FString>(TextRendered::BreakableTile, "Tiles can be broken by jumping\nunderneath them to gain a drop"));
+	textOutput.insert(std::pair<TextRendered, FString>(TextRendered::BreakableTile, "Tiles can be broken by jumping\nunderneath them to gain a drop\nSome tiles take multiple hits to break"));
 	textOutput.insert(std::pair<TextRendered, FString>(TextRendered::EnemyIntro, "Enemies will try to halt your progress!\nLeft click to shoot them"));
 	textOutput.insert(std::pair<TextRendered, FString>(TextRendered::FallingTile, "Watch out for falling tiles that will\ncollapse after you have stood on them!"));
 	textOutput.insert(std::pair<TextRendered, FString>(TextRendered::Movingplatform, "Some platforms will move from side to side\nor up and down, be careful not to fall!"));
@@ -46,4 +46,3 @@ void ATextRenderer::RenderedText()
 {
 	textRenderComp_->SetText(textOutput.at(textRendered));
 }
-

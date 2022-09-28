@@ -372,10 +372,10 @@ void EmptyLinkFunctionForGeneratedCodeWormEnemy() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWormEnemy_Statics::NewProp_upperLeftBound_MetaData[] = {
 		{ "Category", "Spawn" },
-		{ "Comment", "// </Collision>\n///////////////////////////////////////////////////////////////////////////////////////////////////////////\n" },
+		{ "Comment", "///////////////////////////////////////////////////////////////////////////////////////////////////////////\n// <Attributes>\n" },
 		{ "MakeEditWidget", "TRUE" },
 		{ "ModuleRelativePath", "WormEnemy.h" },
-		{ "ToolTip", "</Collision>" },
+		{ "ToolTip", "<Attributes>" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AWormEnemy_Statics::NewProp_upperLeftBound = { "upperLeftBound", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWormEnemy, upperLeftBound), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_AWormEnemy_Statics::NewProp_upperLeftBound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWormEnemy_Statics::NewProp_upperLeftBound_MetaData)) };
@@ -420,7 +420,7 @@ void EmptyLinkFunctionForGeneratedCodeWormEnemy() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWormEnemy, 3667128443);
+	IMPLEMENT_CLASS(AWormEnemy, 2984599010);
 	template<> PLATFORMER2D_API UClass* StaticClass<AWormEnemy>()
 	{
 		return AWormEnemy::StaticClass();

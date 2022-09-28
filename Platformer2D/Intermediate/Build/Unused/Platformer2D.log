@@ -6,10 +6,10 @@
 D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/Bullet.cpp(29): warning C4996: 'USceneComponent::AttachTo': This function is deprecated, please use AttachToComponent instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
 D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/Door.cpp(23): warning C4996: 'USceneComponent::AttachTo': This function is deprecated, please use AttachToComponent instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
 D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/TextRenderer.cpp(47): warning C4996: 'UTextRenderComponent::SetText': Passing text as FString is deprecated, please use FText instead (likely via a LOCTEXT). Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
-    [2/4] UE4Editor-Platformer2D-0103.lib
-       Creating library D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0103.lib and object D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0103.exp
-    [3/4] UE4Editor-Platformer2D-0103.dll
-       Creating library D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0103.suppressed.lib and object D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0103.suppressed.exp
+    [2/4] UE4Editor-Platformer2D-0009.lib
+       Creating library D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0009.lib and object D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0009.exp
+    [3/4] UE4Editor-Platformer2D-0009.dll
+       Creating library D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0009.suppressed.lib and object D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Development\Platformer2D\UE4Editor-Platformer2D-0009.suppressed.exp
     [4/4] Platformer2DEditor.target
-  Total time in Parallel executor: 3.93 seconds
-  Total execution time: 4.40 seconds
+  Total time in Parallel executor: 3.36 seconds
+  Total execution time: 3.79 seconds

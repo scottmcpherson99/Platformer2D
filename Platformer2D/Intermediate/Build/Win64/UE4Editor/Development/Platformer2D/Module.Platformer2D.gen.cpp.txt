@@ -167,6 +167,9 @@ D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build
 D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/FallingTile.gen.cpp
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D/FallingTile.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\FallingTile.generated.h
+D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/FlyingEnemySpawner.gen.cpp
+D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D/FlyingEnemySpawner.h
+D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\FlyingEnemySpawner.generated.h
 D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/GameHUD.gen.cpp
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D/GameHUD.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\UMG\Public\Components/TextBlock.h
