@@ -70,7 +70,19 @@ void AGoal::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 		if (gameMode)
 		{
 			gameMode->PlayFadeOut();
+			//open the next level
+			GetWorldTimerManager().SetTimer(openLevelTimer, this, &AGoal::OpenNextLevel, 1.f, false);
 		}
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void AGoal::OpenNextLevel()
+{
+	//find the current gamemode and open the next level
+	AInPlayGameModeBase* gameMode = (AInPlayGameModeBase*)GetWorld()->GetAuthGameMode();
+	if (gameMode)
+	{
+		UGameplayStatics::OpenLevel(GetWorld(), gameMode->GetNextLevelName());
+	}
+}

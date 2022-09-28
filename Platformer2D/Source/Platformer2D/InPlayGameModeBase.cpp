@@ -26,6 +26,17 @@ void AInPlayGameModeBase::OnPlayerDeath()
 {
 	gameWidget->OnPlayerDeath();
 }
+FName AInPlayGameModeBase::GetNextLevelName()
+{
+	for (int i = 0; i < sizeof(levelNames); i++)
+	{
+		if (levelNames[i] == FName(UGameplayStatics::GetCurrentLevelName(GetWorld(), true)))
+		{
+			return levelNames[i + 1];
+		}
+	}
+	return FName("MainMenu");
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 

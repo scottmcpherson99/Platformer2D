@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Platformer2D.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{93C52596-5D96-4A76-83BB-8E1CAFAEC938}</UniqueIdentifier>
+      <UniqueIdentifier>{C378E84C-2319-40FF-BE9C-A60B721A1E60}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Platformer2D.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{92583A38-1946-4096-85A1-0E92C59CC667}</UniqueIdentifier>
+      <UniqueIdentifier>{A3568848-0E3D-4BE3-8DD9-B33912795E19}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Platformer2D">
-      <UniqueIdentifier>{E337BB7E-FCF3-4CBD-B014-F4A3BE7D5F9F}</UniqueIdentifier>
+      <UniqueIdentifier>{8752E02D-2EC4-44E8-96B1-E83687292C7E}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Platformer2D\AudioManager.cpp">
       <Filter>Source\Platformer2D</Filter>
@@ -45,6 +45,12 @@
       <Filter>Source\Platformer2D</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Platformer2D\BezierEnemy.h">
+      <Filter>Source\Platformer2D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Platformer2D\Boss.cpp">
+      <Filter>Source\Platformer2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Platformer2D\Boss.h">
       <Filter>Source\Platformer2D</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Platformer2D\BreakableTile.cpp">

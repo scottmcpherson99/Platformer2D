@@ -5,6 +5,7 @@
 			"AudioManager.cpp.obj",
 			"BezierCurve.cpp.obj",
 			"BezierEnemy.cpp.obj",
+			"Boss.cpp.obj",
 			"BreakableTile.cpp.obj",
 			"Bullet.cpp.obj",
 			"BulletDrop.cpp.obj",
@@ -42,6 +43,7 @@
 		"Module.Platformer2D.gen.cpp.obj": [
 			"AudioManager.gen.cpp.obj",
 			"BezierEnemy.gen.cpp.obj",
+			"Boss.gen.cpp.obj",
 			"BreakableTile.gen.cpp.obj",
 			"Bullet.gen.cpp.obj",
 			"BulletDrop.gen.cpp.obj",

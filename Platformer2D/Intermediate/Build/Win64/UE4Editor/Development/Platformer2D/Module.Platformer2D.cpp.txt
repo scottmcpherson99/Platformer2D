@@ -34,6 +34,11 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Compone
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h
+D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/Boss.cpp
+D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D\Boss.h
+D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\Boss.generated.h
+D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D\PlayerCharacter.h
+D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\PlayerCharacter.generated.h
 D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/BreakableTile.cpp
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D\BreakableTile.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D\TileBase.h
@@ -41,8 +46,6 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\2D\Paper2D\Source\Paper2D\Cla
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D\PaperSpriteActor.generated.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\TileBase.generated.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\BreakableTile.generated.h
-D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D\PlayerCharacter.h
-D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\PlayerCharacter.generated.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D\Coin.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Source\Platformer2D\Collectable.h
 D:\Unreal Projects\PlatformerJuly22\Platformer2D\Platformer2D\Intermediate\Build\Win64\UE4Editor\Inc\Platformer2D\Collectable.generated.h

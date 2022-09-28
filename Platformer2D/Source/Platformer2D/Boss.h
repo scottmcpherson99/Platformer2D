@@ -1,0 +1,72 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "EnemyBase.h"
+#include "Boss.generated.h"
+
+/**
+ * 
+ */
+
+UENUM(BlueprintType)
+enum class EBossAIState : uint8
+{
+	EATTACKPLAYER UMETA(DisplayName = "AttackPlayer"),
+	EWANDER UMETA(DisplayName = "Wander")
+};
+
+UCLASS()
+class PLATFORMER2D_API ABoss : public AEnemyBase
+{
+	GENERATED_BODY()
+	
+public:
+	ABoss();
+
+protected:
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// <AFlyingEnemySpawner>
+	virtual void BeginPlay() override;
+
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+	// </AFlyingEnemySpawner>
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// <Movement>
+	//timeline actor
+	UPROPERTY(EditAnywhere, Category = "Timeline")
+		UCurveFloat* BezierCurveFloat;
+
+	FTimeline BezierCurveTimeline;
+
+	UFUNCTION()
+		void BezierTimelineProgress(float value);
+
+	//perform tasks based on state
+	void FindControlPoints();
+	// </Movement>
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// <Attributes>
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn", Meta = (MakeEditWidget = true))
+		FVector upperLeftBound;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn", Meta = (MakeEditWidget = true))
+		FVector lowerRightBound;
+	// </Attributes>
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+private:
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// <Attributes>
+	FVector ControlPoints[3];
+	// </Attributes>
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+};
