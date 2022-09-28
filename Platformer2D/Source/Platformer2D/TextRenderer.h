@@ -16,6 +16,7 @@ enum TextRendered
 	Movingplatform UMETA(DisplayName = "MovingPlatform"),
 	FallingTile UMETA(DisplayName = "FallingTile"),
 	Spikes UMETA(DisplayName = "Spikes"),
+	Door UMETA(DisplayName = "Door"),
 };
 
 

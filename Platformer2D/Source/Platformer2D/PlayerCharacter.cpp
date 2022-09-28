@@ -60,6 +60,9 @@ APlayerCharacter::APlayerCharacter()
 // Gameplay
 void APlayerCharacter::OnPlayerDeath()
 {
+	//decrease the players lives
+	SetLives(-1);
+
 	//Show the players mouse cursor and disable their movement
 	APlayerController* playerController = UGameplayStatics::GetPlayerController(this, 0);
 
@@ -98,6 +101,27 @@ void APlayerCharacter::ShootBullet()
 			}
 		}
 	}
+}
+
+void APlayerCharacter::GameOver()
+{
+	//create a new save game object
+	savePlayerStats = Cast<USaveGameStats>(UGameplayStatics::CreateSaveGameObject(USaveGameStats::StaticClass()));
+
+	if (savePlayerStats != nullptr)
+	{
+		//save the new player stats to the save game slot
+		savePlayerStats->SetLives(3);
+		savePlayerStats->SetCoins(0);
+		savePlayerStats->SetBullets(3);
+		savePlayerStats->SetLevelName(FName("Level1"));
+	}
+
+	//update the save game slot
+	UGameplayStatics::SaveGameToSlot(savePlayerStats, FString("Slot1"), 0);
+
+	//open the main menu
+	UGameplayStatics::OpenLevel(GetWorld(), FName("MainMenu"));
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -186,6 +210,13 @@ void APlayerCharacter::SetCoins(float value_)
 {
 	coins += value_;
 
+	//turns the coins into a life if the player reaches 20 coins
+	if (coins >= 20)
+	{
+		coins = 0;
+		lives++;
+	}
+
 	SavePlayerStats();
 
 	//update the players stats on the widget
@@ -203,10 +234,18 @@ void APlayerCharacter::SetLives(float value_)
 {
 	lives += value_;
 
-	SavePlayerStats();
+	if (lives <= 0.f)
+	{
+		GameOver();
+	}
 
-	//update the players stats on the widget
-	UpdatePlayerStats();
+	else
+	{
+		SavePlayerStats();
+
+		//update the players stats on the widget
+		UpdatePlayerStats();
+	}
 }
 
 // Output the player's lives

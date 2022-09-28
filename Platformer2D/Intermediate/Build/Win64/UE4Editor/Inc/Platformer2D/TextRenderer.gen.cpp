@@ -35,7 +35,7 @@ void EmptyLinkFunctionForGeneratedCodeTextRenderer() {}
 		return TextRendered_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_TextRendered(TextRendered_StaticEnum, TEXT("/Script/Platformer2D"), TEXT("TextRendered"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_Platformer2D_TextRendered_Hash() { return 3140041718U; }
+	uint32 Get_Z_Construct_UEnum_Platformer2D_TextRendered_Hash() { return 3164308625U; }
 	UEnum* Z_Construct_UEnum_Platformer2D_TextRendered()
 	{
 #if WITH_HOT_RELOAD
@@ -53,11 +53,14 @@ void EmptyLinkFunctionForGeneratedCodeTextRenderer() {}
 				{ "Movingplatform", (int64)Movingplatform },
 				{ "FallingTile", (int64)FallingTile },
 				{ "Spikes", (int64)Spikes },
+				{ "Door", (int64)Door },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "BreakableTile.DisplayName", "BreakableTile" },
 				{ "BreakableTile.Name", "BreakableTile" },
+				{ "Door.DisplayName", "Door" },
+				{ "Door.Name", "Door" },
 				{ "EnemyIntro.DisplayName", "EnemyIntro" },
 				{ "EnemyIntro.Name", "EnemyIntro" },
 				{ "FallingTile.DisplayName", "FallingTile" },

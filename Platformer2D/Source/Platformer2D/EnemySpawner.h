@@ -1,0 +1,57 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "EnemySpawner.generated.h"
+
+UCLASS()
+class PLATFORMER2D_API AEnemySpawner : public AActor
+{
+	GENERATED_BODY()
+
+public:
+	AEnemySpawner();
+
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// <Enemy to spawn>
+	UPROPERTY(EditAnywhere, Category = "Type of enemy to spawn")
+		TSubclassOf<class ADumbEnemy> enemyToSpawn;
+	// </Enemy to spawn>
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+protected:
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// <AEnemySpawner>
+	virtual void BeginPlay() override;
+
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+	// </AEnemySpawner>
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// <Collsion>
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Collision")
+		class UBoxComponent* TriggerBox;
+
+	UFUNCTION()
+		void OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	// </Collsion>
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// <Attributes>
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn", Meta = (MakeEditWidget = true))
+		FVector spawnVector;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Spawn")
+		class UArrowComponent* spawnArrow;
+
+	FVector EnemySpawnerVec;
+	// </Attributes>
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+};

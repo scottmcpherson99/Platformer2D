@@ -23,6 +23,7 @@ ATextRenderer::ATextRenderer()
 	textOutput.insert(std::pair<TextRendered, FString>(TextRendered::Movingplatform, "Some platforms will move from side to side\nor up and down, be careful not to fall!"));
 	textOutput.insert(std::pair<TextRendered, FString>(TextRendered::Pickup, "You will be able to pickup some aids to help you along your journey!"));
 	textOutput.insert(std::pair<TextRendered, FString>(TextRendered::Spikes, "Be careful not to step on spikes, they will hurt!"));
+	textOutput.insert(std::pair<TextRendered, FString>(TextRendered::Door, "To open this door you will\nneed to find a key first!\nPress 'E' to interact"));
 }
 
 // Called when the game starts or when spawned

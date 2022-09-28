@@ -12,6 +12,7 @@
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/Door.gen.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/DumbEnemy.gen.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/EnemyBase.gen.cpp"
+#include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/EnemySpawner.gen.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/FallingTile.gen.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/GameHUD.gen.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/Goal.gen.cpp"

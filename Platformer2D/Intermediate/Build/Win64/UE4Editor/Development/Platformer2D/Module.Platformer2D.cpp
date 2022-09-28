@@ -13,6 +13,7 @@
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/Door.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/DumbEnemy.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/EnemyBase.cpp"
+#include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/EnemySpawner.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/FallingTile.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/GameHUD.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/Goal.cpp"

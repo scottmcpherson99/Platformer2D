@@ -3,6 +3,7 @@
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/BezierEnemy.gen.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/BreakableTile.gen.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/Bullet.gen.cpp"
+#include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/BulletDrop.gen.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/Coin.gen.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/Collectable.gen.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/ControlsWidget.gen.cpp"
