@@ -2,6 +2,7 @@
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/AudioManager.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/BezierCurve.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/BezierEnemy.cpp"
+#include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/Boss.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/BreakableTile.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/Bullet.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/BulletDrop.cpp"

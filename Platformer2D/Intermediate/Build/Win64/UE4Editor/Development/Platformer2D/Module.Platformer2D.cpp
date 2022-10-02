@@ -19,6 +19,7 @@
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/FlyingEnemySpawner.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/GameHUD.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/Goal.cpp"
+#include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/HealthBar.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/InPlayGameModeBase.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/Interactable.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Source/Platformer2D/KeyPickup.cpp"

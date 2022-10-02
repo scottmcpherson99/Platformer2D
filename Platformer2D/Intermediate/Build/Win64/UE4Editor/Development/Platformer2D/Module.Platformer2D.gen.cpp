@@ -18,6 +18,7 @@
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/FlyingEnemySpawner.gen.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/GameHUD.gen.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/Goal.gen.cpp"
+#include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/HealthBar.gen.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/InPlayGameModeBase.gen.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/Interactable.gen.cpp"
 #include "D:/Unreal Projects/PlatformerJuly22/Platformer2D/Platformer2D/Intermediate/Build/Win64/UE4Editor/Inc/Platformer2D/KeyPickup.gen.cpp"

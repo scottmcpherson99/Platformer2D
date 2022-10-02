@@ -18,7 +18,10 @@ void EmptyLinkFunctionForGeneratedCodeBoss() {}
 	PLATFORMER2D_API UClass* Z_Construct_UClass_ABoss_NoRegister();
 	PLATFORMER2D_API UClass* Z_Construct_UClass_ABoss();
 	PLATFORMER2D_API UClass* Z_Construct_UClass_AEnemyBase();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	PLATFORMER2D_API UClass* Z_Construct_UClass_ABulletDrop_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCurveFloat_NoRegister();
+	UMG_API UClass* Z_Construct_UClass_UWidgetComponent_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 // End Cross Module References
 	static UEnum* EBossAIState_StaticEnum()
@@ -35,7 +38,7 @@ void EmptyLinkFunctionForGeneratedCodeBoss() {}
 		return EBossAIState_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EBossAIState(EBossAIState_StaticEnum, TEXT("/Script/Platformer2D"), TEXT("EBossAIState"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_Platformer2D_EBossAIState_Hash() { return 729775914U; }
+	uint32 Get_Z_Construct_UEnum_Platformer2D_EBossAIState_Hash() { return 2147565254U; }
 	UEnum* Z_Construct_UEnum_Platformer2D_EBossAIState()
 	{
 #if WITH_HOT_RELOAD
@@ -49,6 +52,7 @@ void EmptyLinkFunctionForGeneratedCodeBoss() {}
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "EBossAIState::EATTACKPLAYER", (int64)EBossAIState::EATTACKPLAYER },
 				{ "EBossAIState::EWANDER", (int64)EBossAIState::EWANDER },
+				{ "EBossAIState::ESTATIONARY", (int64)EBossAIState::ESTATIONARY },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
@@ -57,6 +61,9 @@ void EmptyLinkFunctionForGeneratedCodeBoss() {}
 				{ "EATTACKPLAYER.Comment", "/**\n * \n */" },
 				{ "EATTACKPLAYER.DisplayName", "AttackPlayer" },
 				{ "EATTACKPLAYER.Name", "EBossAIState::EATTACKPLAYER" },
+				{ "ESTATIONARY.Comment", "/**\n * \n */" },
+				{ "ESTATIONARY.DisplayName", "Stationary" },
+				{ "ESTATIONARY.Name", "EBossAIState::ESTATIONARY" },
 				{ "EWANDER.Comment", "/**\n * \n */" },
 				{ "EWANDER.DisplayName", "Wander" },
 				{ "EWANDER.Name", "EBossAIState::EWANDER" },
@@ -140,9 +147,17 @@ void EmptyLinkFunctionForGeneratedCodeBoss() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bulletToSpawn_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_bulletToSpawn;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BezierCurveFloat_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_BezierCurveFloat;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_healthWidgetComp_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_healthWidgetComp;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_upperLeftBound_MetaData[];
 #endif
@@ -170,6 +185,15 @@ void EmptyLinkFunctionForGeneratedCodeBoss() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABoss_Statics::NewProp_bulletToSpawn_MetaData[] = {
+		{ "Category", "Type of bullet to spawn" },
+		{ "Comment", "///////////////////////////////////////////////////////////////////////////////////////////////////////////\n// <Bullet to spawn>\n" },
+		{ "ModuleRelativePath", "Boss.h" },
+		{ "ToolTip", "<Bullet to spawn>" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABoss_Statics::NewProp_bulletToSpawn = { "bulletToSpawn", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABoss, bulletToSpawn), Z_Construct_UClass_ABulletDrop_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ABoss_Statics::NewProp_bulletToSpawn_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABoss_Statics::NewProp_bulletToSpawn_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABoss_Statics::NewProp_BezierCurveFloat_MetaData[] = {
 		{ "Category", "Timeline" },
 		{ "Comment", "///////////////////////////////////////////////////////////////////////////////////////////////////////////\n// <Movement>\n//timeline actor\n" },
@@ -178,6 +202,16 @@ void EmptyLinkFunctionForGeneratedCodeBoss() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABoss_Statics::NewProp_BezierCurveFloat = { "BezierCurveFloat", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABoss, BezierCurveFloat), Z_Construct_UClass_UCurveFloat_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABoss_Statics::NewProp_BezierCurveFloat_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABoss_Statics::NewProp_BezierCurveFloat_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABoss_Statics::NewProp_healthWidgetComp_MetaData[] = {
+		{ "Category", "Boss" },
+		{ "Comment", "///////////////////////////////////////////////////////////////////////////////////////////////////////////\n// <Widget>\n" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Boss.h" },
+		{ "ToolTip", "<Widget>" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABoss_Statics::NewProp_healthWidgetComp = { "healthWidgetComp", nullptr, (EPropertyFlags)0x00200800000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABoss, healthWidgetComp), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABoss_Statics::NewProp_healthWidgetComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABoss_Statics::NewProp_healthWidgetComp_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABoss_Statics::NewProp_upperLeftBound_MetaData[] = {
 		{ "Category", "Spawn" },
@@ -197,7 +231,9 @@ void EmptyLinkFunctionForGeneratedCodeBoss() {}
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_ABoss_Statics::NewProp_lowerRightBound = { "lowerRightBound", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABoss, lowerRightBound), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_ABoss_Statics::NewProp_lowerRightBound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABoss_Statics::NewProp_lowerRightBound_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABoss_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABoss_Statics::NewProp_bulletToSpawn,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABoss_Statics::NewProp_BezierCurveFloat,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABoss_Statics::NewProp_healthWidgetComp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABoss_Statics::NewProp_upperLeftBound,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABoss_Statics::NewProp_lowerRightBound,
 	};
@@ -228,7 +264,7 @@ void EmptyLinkFunctionForGeneratedCodeBoss() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABoss, 2903538685);
+	IMPLEMENT_CLASS(ABoss, 1187165835);
 	template<> PLATFORMER2D_API UClass* StaticClass<ABoss>()
 	{
 		return ABoss::StaticClass();

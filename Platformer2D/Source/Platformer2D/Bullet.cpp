@@ -7,6 +7,7 @@
 #include "Components/BoxComponent.h"
 #include "PlayerCharacter.h"
 #include "EnemyBase.h"
+#include "Boss.h"
 #include "Collectable.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -54,9 +55,16 @@ void ABullet::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AAct
 {
 	AEnemyBase* enemy = Cast<AEnemyBase>(OtherActor);
 	APlayerCharacter* playerCharacter = Cast<APlayerCharacter>(OtherActor);
+	ABoss* boss = Cast<ABoss>(OtherActor);
+
+	if (boss != nullptr)
+	{
+		boss->SetHealth(-10);
+		Destroy();
+	}
 
 	//if the colliding actor is an enemy then destroy the bullet and the enemy
-	if (enemy != nullptr)
+	else if (enemy != nullptr)
 	{
 		enemy->Destroy();
 		Destroy();
