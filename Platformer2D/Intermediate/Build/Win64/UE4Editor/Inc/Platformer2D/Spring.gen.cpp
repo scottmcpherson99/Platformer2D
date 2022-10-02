@@ -220,6 +220,10 @@ void EmptyLinkFunctionForGeneratedCodeSpring() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bounceSound_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_bounceSound;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_jumpForce_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_jumpForce;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -259,9 +263,19 @@ void EmptyLinkFunctionForGeneratedCodeSpring() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpring_Statics::NewProp_bounceSound = { "bounceSound", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASpring, bounceSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASpring_Statics::NewProp_bounceSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASpring_Statics::NewProp_bounceSound_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpring_Statics::NewProp_jumpForce_MetaData[] = {
+		{ "Category", "Attributes" },
+		{ "Comment", "// </Animation>\n///////////////////////////////////////////////////////////////////////////////////////////////////////////\n" },
+		{ "ModuleRelativePath", "Spring.h" },
+		{ "ToolTip", "</Animation>" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ASpring_Statics::NewProp_jumpForce = { "jumpForce", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASpring, jumpForce), METADATA_PARAMS(Z_Construct_UClass_ASpring_Statics::NewProp_jumpForce_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASpring_Statics::NewProp_jumpForce_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASpring_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpring_Statics::NewProp_usedSpriteComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpring_Statics::NewProp_bounceSound,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpring_Statics::NewProp_jumpForce,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASpring_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASpring>::IsAbstract,
@@ -290,7 +304,7 @@ void EmptyLinkFunctionForGeneratedCodeSpring() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASpring, 855527300);
+	IMPLEMENT_CLASS(ASpring, 3426606550);
 	template<> PLATFORMER2D_API UClass* StaticClass<ASpring>()
 	{
 		return ASpring::StaticClass();

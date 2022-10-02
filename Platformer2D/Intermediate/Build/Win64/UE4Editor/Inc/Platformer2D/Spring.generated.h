@@ -73,7 +73,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASpring); \
 
 #define Platformer2D_Source_Platformer2D_Spring_h_15_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__usedSpriteComponent() { return STRUCT_OFFSET(ASpring, usedSpriteComponent); } \
-	FORCEINLINE static uint32 __PPO__bounceSound() { return STRUCT_OFFSET(ASpring, bounceSound); }
+	FORCEINLINE static uint32 __PPO__bounceSound() { return STRUCT_OFFSET(ASpring, bounceSound); } \
+	FORCEINLINE static uint32 __PPO__jumpForce() { return STRUCT_OFFSET(ASpring, jumpForce); }
 
 
 #define Platformer2D_Source_Platformer2D_Spring_h_12_PROLOG

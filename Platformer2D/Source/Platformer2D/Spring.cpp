@@ -21,6 +21,8 @@ ASpring::ASpring()
 	usedSpriteComponent = CreateDefaultSubobject<UPaperSpriteComponent>(TEXT("usedSpriteComponent"));
 	usedSpriteComponent->SetupAttachment(RootComponent);
 	usedSpriteComponent->SetEnableGravity(false);
+
+	jumpForce = 3000;
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -60,7 +62,7 @@ void ASpring::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AAct
 		audioManagerHandler->PlayAudio(bounceSound);
 
 		//launch the character in the air
-		playerCharacter->LaunchCharacter(FVector(0.f, 0.f, 1000.f), false, true);
+		playerCharacter->LaunchCharacter(FVector(0.f, 0.f, jumpForce), false, true);
 
 		//set the used spring animation on display
 		usedSpriteComponent->SetVisibility(true);

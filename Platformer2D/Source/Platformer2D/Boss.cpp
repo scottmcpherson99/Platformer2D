@@ -89,8 +89,6 @@ void ABoss::BeginPlay()
 	//set the bounding areas
 	upperLeftBound += TriggerBox->GetComponentLocation();
 	lowerRightBound += TriggerBox->GetComponentLocation();
-
-	GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Play Begun!")));
 }
 
 void ABoss::Tick(float DeltaTime)
@@ -110,9 +108,6 @@ void ABoss::SwitchState(EBossAIState newState_)
 	// set the new state
 	currentState = newState_;
 
-
-	GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("State Switched!")));
-
 	// reset the number of loops in the state
 	numberOfLoopsInState = 0;
 }
@@ -121,9 +116,6 @@ void ABoss::StartStateMachine()
 {
 	// clear the timer
 	GetWorldTimerManager().ClearTimer(startStateTimer);
-
-
-	GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("State Machine Started")));
 
 	// start the AI wander state
 	SwitchState(EBossAIState::EWANDER);
@@ -168,7 +160,6 @@ void ABoss::FindControlPoints()
 		// attack the player
 	case EBossAIState::EATTACKPLAYER:
 
-		GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Attack!")));
 		//get the current location of the ai
 		ControlPoints[0] = TriggerBox->GetComponentLocation();
 
@@ -211,8 +202,7 @@ void ABoss::FindControlPoints()
 
 		// wander around the arena
 		case EBossAIState::EWANDER:
-			GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Wander!!")));
-
+			
 			//set the starting control point to be the current location and pick two random points within the boundaries to be the second and third control points
 			ControlPoints[0] = TriggerBox->GetComponentLocation();;
 			for (int i = 1; i < 3; i++)

@@ -65,4 +65,7 @@ protected:
 	void ResetAnimation();
 	// </Animation>
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
+		int jumpForce;
 };
