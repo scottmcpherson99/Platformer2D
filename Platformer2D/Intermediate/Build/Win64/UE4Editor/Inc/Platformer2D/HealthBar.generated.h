@@ -61,9 +61,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UHealthBar); \
 
 
 #define Platformer2D_Source_Platformer2D_HealthBar_h_16_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__healthBar() { return STRUCT_OFFSET(UHealthBar, healthBar); } \
-	FORCEINLINE static uint32 __PPO__currentHealthLabel() { return STRUCT_OFFSET(UHealthBar, currentHealthLabel); } \
-	FORCEINLINE static uint32 __PPO__maxHealthLabel() { return STRUCT_OFFSET(UHealthBar, maxHealthLabel); }
+	FORCEINLINE static uint32 __PPO__healthBar() { return STRUCT_OFFSET(UHealthBar, healthBar); }
 
 
 #define Platformer2D_Source_Platformer2D_HealthBar_h_13_PROLOG

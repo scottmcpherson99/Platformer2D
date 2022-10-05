@@ -16,7 +16,7 @@ void UHealthBar::NativeTick(const FGeometry& myGeometry, float InDeltaTime)
 
 	healthBar->SetPercent(ownerBoss->GetHealth() / ownerBoss->GetMaxHealth());
 
-	currentHealthLabel->SetText(FText::AsNumber(ownerBoss->GetHealth()));
-	maxHealthLabel->SetText(FText::AsNumber(ownerBoss->GetMaxHealth()));
+	//currentHealthLabel->SetText(FText::AsNumber(ownerBoss->GetHealth()));
+	//maxHealthLabel->SetText(FText::AsNumber(ownerBoss->GetMaxHealth()));
 
 }

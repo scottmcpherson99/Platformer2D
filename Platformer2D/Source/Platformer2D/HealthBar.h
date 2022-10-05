@@ -28,9 +28,9 @@ protected:
 	UPROPERTY(meta = (BindWidget))
 		class UProgressBar* healthBar;
 
-	UPROPERTY(meta = (BindWidget))
-		class UTextBlock* currentHealthLabel;
+//	UPROPERTY(meta = (BindWidget))
+	//	class UTextBlock* currentHealthLabel;
 
-	UPROPERTY(meta = (BindWidget))
-		class UTextBlock* maxHealthLabel;
+//	UPROPERTY(meta = (BindWidget))
+	//	class UTextBlock* maxHealthLabel;
 };
