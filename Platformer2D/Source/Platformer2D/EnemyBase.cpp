@@ -47,14 +47,23 @@ void AEnemyBase::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, A
 	//if the colliding actor is the player, display the death screen
 	if (playerCharacter != nullptr)
 	{
-		playerCharacter->OnPlayerDeath();
-
-		//display the death screen on the widget
-		AInPlayGameModeBase* gameMode = (AInPlayGameModeBase*)GetWorld()->GetAuthGameMode();
-
-		if (gameMode)
+		// check if the player has already been killed
+		if (playerCharacter->GetImunity() == false)
 		{
-			gameMode->OnPlayerDeath();
+			playerCharacter->OnPlayerDeath();
+
+			//set the player character to be immune from taking any more damage
+			playerCharacter->SetImunity(true);
+
+			//display the death screen on the widget
+			AInPlayGameModeBase* gameMode = (AInPlayGameModeBase*)GetWorld()->GetAuthGameMode();
+
+			if (gameMode)
+			{
+				gameMode->OnPlayerDeath();
+			}
+
+			
 		}
 	}
 }

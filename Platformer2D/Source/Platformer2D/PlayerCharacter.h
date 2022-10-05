@@ -56,6 +56,12 @@ public:
 
 	// Output if the player has the key
 		const bool GetHasPlayerGotKey() const;
+
+	// set the player to be imune from taking any more damage
+		void SetImunity(bool imunity_);
+
+	// check if the player is dead
+		const bool GetImunity() const;
 	// </GettersandSetters>
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -236,6 +242,9 @@ private:
 
 		//check if the player has a key
 		bool hasKey;
+
+		// check if the player is already dead
+		bool playerImunity;
 		// </Attributes>
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////
 };

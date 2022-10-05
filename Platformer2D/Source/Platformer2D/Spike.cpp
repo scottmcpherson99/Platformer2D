@@ -47,6 +47,9 @@ void ASpike::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActo
 	//if the colliding actor is the player, display the death screen
 	if (playerCharacter != nullptr)
 	{
+		// check if the player has already been killed
+		if (playerCharacter->GetImunity() == false)
+		{
 		playerCharacter->OnPlayerDeath();
 
 		//display the death screen on the widget
@@ -55,6 +58,9 @@ void ASpike::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActo
 		if (gameMode)
 		{
 			gameMode->OnPlayerDeath();
+		}
+		//set the player character to be immune from taking any more damage
+		playerCharacter->SetImunity(false);
 		}
 	}
 }

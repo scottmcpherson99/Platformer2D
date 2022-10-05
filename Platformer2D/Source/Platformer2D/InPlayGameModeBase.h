@@ -72,7 +72,7 @@ protected:
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// <Levels>
-	FName levelNames[6] = { FName("Level1"), FName("Level2"), FName("Level3"), FName("Level4"), FName("MainMenu"), FName("Level1")};
+	FName levelNames[7] = { FName("Level1"), FName("Level2"), FName("Level3"), FName("Level4"), FName("BossArena"), FName("MainMenu"), FName("Level1")};
 	// </Levels>
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 };

@@ -61,6 +61,7 @@ void AGoal::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 
 			if (playerCharacter != nullptr)
 			{
+				playerCharacter->SetImunity(true);
 				playerCharacter->DisableInput(playerController);
 			}
 		}
@@ -71,7 +72,7 @@ void AGoal::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 		{
 			gameMode->PlayFadeOut();
 			//open the next level
-			GetWorldTimerManager().SetTimer(openLevelTimer, this, &AGoal::OpenNextLevel, 1.f, false);
+			GetWorldTimerManager().SetTimer(openLevelTimer, this, &AGoal::OpenNextLevel, 2.f, false);
 		}
 	}
 }

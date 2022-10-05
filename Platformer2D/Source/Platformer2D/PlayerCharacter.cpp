@@ -52,6 +52,8 @@ APlayerCharacter::APlayerCharacter()
 	playerFacingRight = true;
 
 	hasKey = false;
+
+	playerImunity = false;
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -287,6 +289,16 @@ void APlayerCharacter::SetHasPlayerGotKey(bool hasKey_)
 const bool APlayerCharacter::GetHasPlayerGotKey() const
 {
 	return hasKey;
+}
+
+void APlayerCharacter::SetImunity(bool imunity_)
+{
+	playerImunity = imunity_;
+}
+
+const bool APlayerCharacter::GetImunity() const
+{
+	return playerImunity;
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
